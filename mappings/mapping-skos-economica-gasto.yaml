@@ -1,0 +1,82 @@
+prefixes:
+  rr: http://www.w3.org/ns/r2rml#
+  foaf: http://xmlns.com/foaf/0.1/
+  xsd: http://www.w3.org/2001/XMLSchema#
+  rdfs: http://www.w3.org/2000/01/rdf-schema#
+  dc: http://purl.org/dc/elements/1.1/
+  dct: http://purl.org/dc/terms/
+  rml: http://semweb.mmlab.be/ns/rml#
+  rdf: http://www.w3.org/1999/02/22-rdf-syntax-ns#
+  skos: http://www.w3.org/2004/02/skos/core#
+  owl: http://www.w3.org/2002/07/owl#
+
+mappings:
+  terms1:
+    sources:
+      - [clasificacion-economica-gasto1.csv~csv]
+    s: http://vocab.linkeddata.es/datosabiertos/kos/hacienda/presupuesto/economica-gasto
+    po:
+      - [a, skos:ConceptScheme]
+      - [skos:hasTopConcept,http://vocab.linkeddata.es/datosabiertos/kos/hacienda/presupuesto/economica-gasto/$(capitulo)~iri]
+  terms2:
+    sources:
+     - [clasificacion-economica-gasto1.csv~csv]     
+    s: http://vocab.linkeddata.es/datosabiertos/kos/hacienda/presupuesto/economica-gasto/$(capitulo)
+    po:
+      - [a,skos:Concept]
+      - [skos:inScheme, http:vocab.linkeddata.es/datosabiertos/kos/hacienda/presupuesto/economica-gasto~iri]
+      - [skos:prefLabel,$(denominacion),es~lang]
+  terms21:
+    sources:
+     - [clasificacion-economica-gasto2.csv~csv]     
+    s: http://vocab.linkeddata.es/datosabiertos/kos/hacienda/presupuesto/economica-gasto/$(capitulo)
+    po:
+      - [skos:narrower, http://vocab.linkeddata.es/datosabiertos/kos/hacienda/presupuesto/economica-gasto/$(articulo)~iri] 
+  terms3:
+    sources:
+     - [clasificacion-economica-gasto1.csv~csv]     
+    s: http://vocab.linkeddata.es/datosabiertos/kos/hacienda/presupuesto/economica-gasto/$(articulo)
+    po:
+      - [a,skos:Concept]
+      - [skos:inScheme, http:vocab.linkeddata.es/datosabiertos/kos/hacienda/presupuesto/economica-gasto~iri]
+      - [skos:prefLabel,$(denominacion),es~lang]
+  terms31:
+    sources:
+     - [clasificacion-economica-gasto2.csv~csv]     
+    s: http://vocab.linkeddata.es/datosabiertos/kos/hacienda/presupuesto/economica-gasto/$(articulo)
+    po:
+      - [skos:narrower, http://vocab.linkeddata.es/datosabiertos/kos/hacienda/presupuesto/economica-gasto/$(concepto)~iri] 
+      - [skos:broader, http://vocab.linkeddata.es/datosabiertos/kos/hacienda/presupuesto/economica-gasto/$(capitulo)~iri] 
+terms4:
+    sources:
+     - [clasificacion-economica-gasto1.csv~csv]     
+    s: http://vocab.linkeddata.es/datosabiertos/kos/hacienda/presupuesto/economica-gasto/$(concepto)
+    po:
+      - [a,skos:Concept]
+      - [skos:inScheme, http:vocab.linkeddata.es/datosabiertos/kos/hacienda/presupuesto/economica-gasto~iri]
+      - [skos:prefLabel,$(denominacion),es~lang]
+terms41:
+    sources:
+     - [clasificacion-economica-gasto2.csv~csv]     
+    s: http://vocab.linkeddata.es/datosabiertos/kos/hacienda/presupuesto/economica-gasto/$(concepto)
+    po:
+      - [skos:narrower, http://vocab.linkeddata.es/datosabiertos/kos/hacienda/presupuesto/economica-gasto/$(subconcepto)~iri] 
+      - [skos:broader, http://vocab.linkeddata.es/datosabiertos/kos/hacienda/presupuesto/economica-gasto/$(articulo)~iri] 
+
+terms5:
+    sources:
+     - [clasificacion-economica-gasto1.csv~csv]     
+    s: http://vocab.linkeddata.es/datosabiertos/kos/hacienda/presupuesto/economica-gasto/$(subconcepto)
+    po:
+      - [a,skos:Concept]
+      - [skos:inScheme, http:vocab.linkeddata.es/datosabiertos/kos/hacienda/presupuesto/economica-gasto~iri]
+      - [skos:prefLabel,$(denominacion),es~lang]
+terms51:
+    sources:
+     - [clasificacion-economica-gasto2.csv~csv]     
+    s: http://vocab.linkeddata.es/datosabiertos/kos/hacienda/presupuesto/economica-gasto/$(subconcepto)
+    po:
+      - [skos:broader, http://vocab.linkeddata.es/datosabiertos/kos/hacienda/presupuesto/economica-gasto/$(concepto)~iri] 
+
+
+  
