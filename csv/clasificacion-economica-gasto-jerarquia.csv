@@ -1,0 +1,363 @@
+capitulo,articulo,concepto,subconcepto,denominacion
+1,,,,GASTOS DE PERSONAL.
+1,10,,,Órganos de gobierno y personal directivo.
+,10,100,,Retribuciones básicas y otras remuneraciones de los miembros de los órganos de gobierno.
+,,100,100.00,Retribuciones básicas.
+,,100,100.01,Otras remuneraciones.
+,10,101,,Retribuciones básicas y otras remuneraciones del personal directivo.
+,,101,101.00,Retribuciones básicas.
+,,101,101.01,Otras remuneraciones.
+,10,107,,Contribuciones a planes y fondos de pensiones.
+,,107,107.00,De los miembros de los órganos de gobierno.
+,,107,107.01,Del personal directivo.
+1,11,,,Personal eventual.
+,11,110,,Retribuciones básicas y otras remuneraciones de personal eventual.
+,,110,110.00,Retribuciones básicas.
+,,110,110.01,Retribuciones complementarias.
+,,110,110.02,Otras remuneraciones.
+,11,117,,Contribuciones a planes y fondos de pensiones.
+1,12,,,Personal Funcionario.
+,12,120,,Retribuciones básicas.
+,,120,120.00,Sueldos del Grupo A1.
+,,120,120.01,Sueldos del Grupo A2.
+,,120,120.02,Sueldos del Grupo B.
+,,120,120.03,Sueldos del Grupo C1.
+,,120,120.04,Sueldos del Grupo C2.
+,,120,120.05,Sueldos del Grupo E.
+,,120,120.06,Trienios.
+,,120,120.09,Otras retribuciones básicas.
+,12,121,,Retribuciones complementarias.
+,,121,121.00,Complemento de destino.
+,,121,121.01,Complemento específico.
+,,121,121.03,Otros complementos.
+,12,122,,Retribuciones en especie.
+,12,124,,Retribuciones de funcionarios en prácticas (mismo desglose que 120).
+,12,127,,Contribuciones a planes y fondos de pensiones.
+1,13,,,Personal Laboral.
+,13,130,,Laboral Fijo.
+,,130,130.00,Retribuciones básicas.
+,,130,130.01,Horas extraordinarias
+,,130,130.02,Otras remuneraciones.
+,13,131,,Laboral temporal.
+,13,132,,Retribuciones en especie.
+,13,137,,Contribuciones a planes y fondos de pensiones.
+1,14,,,Otro personal.
+,14,143,,Otro personal.
+,14,147,,Contribuciones a planes y fondos de pensiones.
+1,15,,,Incentivos al rendimiento.
+,15,150,,Productividad.
+,15,151,,Gratificaciones.
+,15,152,,Otros incentivos al rendimiento.
+,15,153,,Complemento de dedicación especial.
+1,16,,,"Cuotas, prestaciones y gastos sociales a cargo del empleador."
+,16,160,,Cuotas sociales.
+,,160,160.00,Seguridad Social.
+,,160,160.08,Asistencia médico-farmacéutica.
+,,160,160.09,Otras cuotas.
+,16,161,,Prestaciones sociales.
+,,161,161.03,Pensiones excepcionales.
+,,161,161.04,Indemnizaciones al personal laboral por jubilaciones anticipadas.
+,,161,161.05,Pensiones a cargo de la Entidad local.
+,,161,161.07,Asistencia médico-farmacéutica a pensionistas.
+,16,162,,Gastos sociales del personal.
+,,162,162.00,Formación y perfeccionamiento del personal.
+,,162,162.01,Economatos y comedores.
+,,162,162.02,Transporte de personal.
+,,162,162.04,Acción social.
+,,162,162.05,Seguros.
+,,162,162.09,Otros gastos sociales.
+,16,164,,Complemento familiar.
+2,,,,GASTOS CORRIENTES EN BIENES Y SERVICIOS.
+2,20,,,Arrendamientos y cánones.
+,20,200,,Arrendamientos de terrenos y bienes naturales.
+,20,202,,Arrendamientos de edificios y otras construcciones.
+,20,203,,"Arrendamientos de maquinaria, instalaciones y utillaje."
+,20,204,,Arrendamientos de material de transporte.
+,20,205,,Arrendamientos de mobiliario y enseres.
+,20,206,,Arrendamientos de equipos para procesos de información.
+,20,208,,Arrendamientos de otro inmovilizado material.
+,20,209,,Cánones.
+2,21,,,"Reparaciones, mantenimiento y conservación."
+,21,210,,Infraestructuras y bienes naturales.
+,21,212,,Edificios y otras construcciones.
+,21,213,,"Maquinaria, instalaciones técnicas y utillaje."
+,21,214,,Elementos de transporte.
+,21,215,,Mobiliario.
+,21,216,,Equipos para procesos de información.
+,21,219,,Otro inmovilizado material.
+2,22,,,"Material, suministros y otros."
+,22,220,,Material de oficina.
+,,220,220.00,Ordinario no inventariable.
+,,220,220.01,"Prensa, revistas, libros y otras publicaciones."
+,,220,220.02,Material informático no inventariable.
+,22,221,,Suministros.
+,,221,221.00,Energía eléctrica.
+,,221,221.01,Agua.
+,,221,221.02,Gas.
+,,221,221.03,Combustibles y carburantes.
+,,221,221.04,Vestuario.
+,,221,221.05,Productos alimenticios.
+,,221,221.06,Productos farmacéuticos y material sanitario.
+,,221,221.10,Productos de limpieza y aseo.
+,,221,221.11,"Suministros de repuestos de maquinaria, utillaje y elementos de transporte."
+,,221,221.12,"Suministros de material electrónico, eléctrico y de telecomunicaciones."
+,,221,221.13,Manutención de animales.
+,,221,221.99,Otros suministros.
+,22,222,,Comunicaciones.
+,,222,222.00,Servicios de Telecomunicaciones.
+,,222,222.01,Postales.
+,,222,222.02,Telegráficas.
+,,222,222.03,Informáticas.
+,,222,222.99,Otros gastos en comunicaciones.
+,22,223,,Transportes.
+,22,224,,Primas de seguros.
+,22,225,,Tributos.
+,,225,225.00,Tributos estatales.
+,,225,225.01,Tributos de las Comunidades Autónomas.
+,,225,225.02,Tributos de las Entidades locales.
+,22,226,,Gastos diversos.
+,,226,226.01,Atenciones protocolarias y representativas.
+,,226,226.02,Publicidad y propaganda.
+,,226,226.03,Publicación en Diarios Oficiales.
+,,226,226.04,"Jurídicos, contenciosos."
+,,226,226.06,"Reuniones, conferencias y cursos."
+,,226,226.07,Oposiciones y pruebas selectivas.
+,,226,226.09,Actividades culturales y deportivas.
+,,226,226.99,Otros gastos diversos.
+,22,227,,Trabajos realizados por otras empresas y profesionales.
+,,227,227.00,Limpieza y aseo.
+,,227,227.01,Seguridad.
+,,227,227.02,Valoraciones y peritajes.
+,,227,227.04,"Custodia, depósito y almacenaje."
+,,227,227.05,Procesos electorales.
+,,227,227.06,Estudios y trabajos técnicos.
+,,227,227.08,Servicios de recaudación a favor de la entidad.
+,,227,227.99,Otros trabajos realizados por otras empresas y profesionales.
+2,23,,,Indemnizaciones por razón del servicio.
+,23,230,,Dietas.
+,,230,230.00,De los miembros de los órganos de gobierno.
+,,230,230.10,Del personal directivo.
+,,230,230.20,Del personal no directivo.
+,23,231,,Locomoción.
+,,231,231.00,De los miembros de los órganos de gobierno.
+,,231,231.10,Del personal directivo.
+,,231,231.20,Del personal no directivo.
+,23,233,,Otras indemnizaciones.
+2,24,,,Gastos de publicaciones.
+,24,240,,Gastos de edición y distribución.
+2,25,,,Trabajos realizados por administraciones públicas y otras entidades públicas.
+2,26,,,Trabajos realizados por Instituciones sin fines de lucro.
+3,,,,GASTOS FINANCIEROS.
+3,30,,,De Deuda Pública en euros.
+,30,300,,Intereses.
+,30,301,,"Gastos de emisión, modificación y cancelación."
+,30,309,,Otros gastos financieros de Deuda Pública en euros.
+3,31,,,De préstamos y otras operaciones financieras en euros.
+,31,310,,Intereses.
+,31,311,,"Gastos de formalización, modificación y cancelación."
+,31,319,,Otros gastos financieros de préstamos y otras operaciones financieras en euros.
+3,32,,,De deuda pública en moneda distinta del euro.
+,32,320,,Intereses.
+,32,321,,"Gastos de emisión, modificación y cancelación."
+,32,322,,Diferencias de cambio.
+,32,329,,Otros gastos financieros de Deuda Pública en moneda distinta del euro.
+3,33,,,De préstamos y otras operaciones financieras en moneda distinta del euro.
+,33,330,,Intereses.
+,33,331,,"Gastos de formalización, modificación y cancelación."
+,33,332,,Diferencias de cambio.
+,33,339,,Otros gastos financieros de préstamos y otras operaciones financieras en moneda distinta del euro.
+3,34,,,"De depósitos, fianzas y otros."
+,34,340,,Intereses de depósitos.
+,34,341,,Intereses de fianzas.
+3,35,,,Intereses de demora y otros gastos financieros.
+,35,352,,Intereses de demora.
+,35,353,,Operaciones de intercambio financiero.
+,35,357,,Ejecución de avales.
+,35,358,,Intereses por operaciones de arrendamiento financiero («leasing»).
+,35,359,,Otros gastos financieros.
+4,,,,TRANSFERENCIAS CORRIENTES.
+4,40,,,A la Administración General de la Entidad Local.
+4,41,,,A Organismos Autónomos de la Entidad Local.
+4,42,,,A la Administración del Estado.
+,42,420,,A la Administración General del Estado.
+,42,421,,A Organismos Autónomos yAgencias estatales.
+,,421,421.00,Al Servicio Público de Empleo Estatal.
+,,421,421.10,A otros organismos autónomos.
+,42,422,,A Fundaciones estatales.
+,42,423,,"A sociedades mercantiles estatales, entidades públicas empresariales y otros organismos públicos."
+,,423,423.00,Subvenciones para fomento del empleo.
+,,423,423.10,Subvenciones para bonificación de intereses y primas de seguros.
+,,423,423.20,Subvenciones para reducir el precio a pagar por los consumidores.
+,,423,423.90,"Otras subvenciones a sociedades mercantiles estatales, entidades públicas empresariales y otros organismos públicos."
+4,43,,,A la Seguridad Social.
+4,44,,,A entes públicos y sociedades mercantiles de la Entidad Local.
+,44,440,,Subvenciones para fomento del empleo.
+,44,441,,Subvenciones para bonificación de intereses y primas de seguros.
+,44,442,,Subvenciones para reducir el precio a pagar por los consumidores.
+,44,449,,Otras subvenciones a entes públicos y sociedades mercantiles de la Entidad Local.
+4,45,,,A Comunidades Autónomas.
+,45,450,,A la Administración General de las Comunidades Autónomas.
+,45,451,,A Organismos Autónomos y agencias de las Comunidades Autónomas.
+,45,452,,A fundaciones de las Comunidades Autónomas.
+,45,453,,"A sociedades mercantiles, entidades públicas empresariales y otros organismos públicos dependientes de las Comunidades Autónomas."
+,,453,453.00,Subvenciones para fomento del empleo.
+,,453,453.10,Subvenciones para bonificación de intereses y primas de seguros.
+,,453,453.20,Subvenciones para reducir el precio a pagar por los consumidores.
+,,453,453.90,"Otras subvenciones a sociedades mercantiles, entidades públicas empresariales y otros organismos públicos dependientes de las Comunidades Autónomas."
+4,46,,,A Entidades Locales.
+,46,461,,"A Diputaciones, Consejos o Cabildos insulares."
+,46,462,,A Ayuntamientos.
+,46,463,,A Mancomunidades.
+,46,464,,A Áreas Metropolitanas.
+,46,465,,A Comarcas.
+,46,466,,A otras Entidades que agrupen municipios.
+,46,467,,A Consorcios.
+,46,468,,A Entidades Locales Menores.
+4,47,,,A Empresas privadas.
+,47,470,,Subvenciones para fomento del empleo.
+,47,471,,Subvenciones para bonificación de intereses y primas de seguros.
+,47,472,,Subvenciones para reducir el precio a pagar por los consumidores.
+,47,479,,Otras subvenciones a Empresas privadas.
+4,48,,,A Familias e Instituciones sin fines de lucro.
+4,49,,,Al exterior.
+5,,,,FONDO DE CONTINGENCIA Y OTROS IMPREVISTOS.
+5,50,,,Dotación al Fondo de Contingencia de Ejecución Presupuestaria.
+,50,500,,"Fondo de Contingencia de Ejecución Presupuestaria. Artículo 31 Ley Orgánica 2/2012, de Estabilidad Presupuestaria y Sostenibilidad Financiera."
+6,,,,INVERSIONES REALES.
+6,60,,,Inversión nueva en infraestructuras y bienes destinados al uso general.
+,60,600,,Inversiones en terrenos.
+,60,609,,Otras inversiones nuevas en infraestructuras y bienes destinados al uso general.
+6,61,,,Inversiones de reposición de infraestructuras y bienes destinados al uso general.
+,61,610,,Inversiones en terrenos.
+,61,619,,Otras inversiones de reposición en infraestructuras y bienes destinados al uso general.
+6,62,,,Inversión nueva asociada al funcionamiento operativo de los servicios.
+,62,621,,Terrenos y bienes naturales.
+,62,622,,Edificios y otras construcciones.
+,62,623,,"Maquinaria, instalaciones técnicas y utillaje."
+,62,624,,Elementos de transporte.
+,62,625,,Mobiliario.
+,62,626,,Equipos para procesos de información.
+,62,627,,Proyectos complejos.
+,62,629,,Otras inversiones nuevas asociadas al funcionamiento operativo de los servicios.
+6,63,,,Inversión de reposición asociada al funcionamiento operativo de los servicios.
+,63,631,,Terrenos y bienes naturales.
+,63,632,,Edificios y otras construcciones.
+,63,633,,"Maquinaria, instalaciones técnicas y utillaje."
+,63,634,,Elementos de transporte.
+,63,635,,Mobiliario.
+,63,636,,Equipos para procesos de información.
+,63,637,,Proyectos complejos.
+,63,639,,Otras inversiones de reposición asociadas al funcionamiento operativo de los servicios.
+6,64,,,Gastos en inversiones de carácter inmaterial.
+,64,640,,Gastos en inversiones de carácter inmaterial.
+,64,641,,Gastos en aplicaciones informáticas.
+,64,648,,Cuotas netas de intereses por operaciones de arrendamiento financiero («leasing»).
+6,65,,,Inversiones gestionadas para otros entes públicos.
+,65,650,,Gastos en inversiones gestionadas para otros entes públicos.
+6,68,,,Gastos en inversiones de bienes patrimoniales.
+,68,681,,Terrenos y bienes naturales.
+,68,682,,Edificios y otras construcciones.
+,68,689,,Otros gastos en inversiones de bienes patrimoniales.
+6,69,,,Inversiones en bienes comunales.
+,69,690,,Terrenos y bienes naturales.
+,69,692,,Inversión en infraestructuras.
+7,,,,TRANSFERENCIAS DE CAPITAL.
+7,70,,,A la Administración General de la Entidad Local.
+7,71,,,A Organismos Autónomos de la Entidad Local.
+7,72,,,A la Administración del Estado.
+,72,720,,A la Administración General del Estado.
+,72,,,A Organismos Autónomos y agencias.
+,,,721.00,Al Servicio Público de Empleo Estatal.
+,,721,721.09,A otros organismos autónomos.
+,72,722,,A fundaciones estatales.
+,72,723,,"A sociedades mercantiles estatales, entidades públicas empresariales y otros organismos públicos."
+7,73,,,A la Seguridad Social.
+7,74,,,A entes públicos y sociedades mercantiles de la Entidad local.
+7,75,,,A Comunidades Autónomas.
+,75,750,,A la Administración General de las Comunidades Autónomas.
+,75,751,,A Organismos Autónomos y agencias de las Comunidades Autónomas.
+,75,752,,A fundaciones de las Comunidades Autónomas.
+,75,753,,"A sociedades mercantiles, entidades públicas empresariales y otros organismos públicos dependientes de las Comunidades Autónomas."
+7,76,,,A Entidades Locales.
+,76,761,,"A Diputaciones, Consejos o Cabildos."
+,76,762,,A Ayuntamientos.
+,76,763,,A Mancomunidades.
+,76,764,,A Áreas Metropolitanas.
+,76,765,,A Comarcas.
+,76,766,,A Entidades que agrupen Municipios.
+,76,767,,A Consorcios.
+,76,768,,A Entidades Locales Menores.
+7,77,,,A empresas privadas.
+7,78,,,A familias e instituciones sin fines de lucro.
+7,79,,,Al exterior.
+8,,,,ACTIVOS FINANCIEROS.
+8,80,,,Adquisición de deuda del sector público.
+,80,800,,Adquisición de deuda del sector público a corto plazo.
+,,800,800.00,Al Estado.
+,,800,800.10,A Comunidades Autónomas.
+,,800,800.20,A Entidades locales.
+,,800,800.90,A otros subsectores.
+,80,801,,Adquisición de deuda del sector público a largo plazo.
+,,801,801.00,Al Estado.
+,,801,801.10,A Comunidades Autónomas.
+,,801,801.20,A Entidades locales.
+,,801,801.90,A otros subsectores.
+8,81,,,Adquisición de Obligaciones y Bonos fuera del sector público.
+,81,810,,Adquisición de obligaciones y bonos fuera del sector público a corto plazo. Desarrollo por sectores.
+,81,811,,Adquisición de obligaciones y bonos fuera del sector público a largo plazo. Desarrollo por sectores.
+8,82,,,Concesión préstamos al sector público.
+,82,820,,Préstamos a corto plazo.
+,,820,820.00,Al Estado.
+,,820,820.10,A Comunidades Autónomas.
+,,820,820.20,A Entidades locales.
+,,820,820.90,A otros subsectores.
+,82,821,,Préstamos a largo plazo.
+,,821,821.00,Al Estado.
+,,821,821.10,A Comunidades Autónomas.
+,,821,821.20,A Entidades locales.
+,,821,821.90,A otros subsectores.
+8,83,,,Concesión de préstamos fuera del sector público.
+,83,830,,Préstamos a corto plazo. Desarrollo por sectores.
+,83,831,,Préstamos a largo plazo. Desarrollo por sectores.
+8,84,,,Constitución de depósitos y fianzas.
+,84,840,,Depósitos.
+,,840,840.00,A corto plazo.
+,,840,840.10,A largo plazo.
+,84,841,,Fianzas.
+,,841,841.00,A corto plazo.
+,,841,841.10,A largo plazo.
+8,85,,,Adquisición de acciones y participaciones del sector público.
+,85,850,,Adquisición de acciones y participaciones del sector público.
+,,850,850.01,Adquisición de acciones y participaciones para compensar pérdidas.
+,,850,850.20,Adquisición de acciones y participaciones para financiar inversiones no rentables.
+,,850,850.90,Resto de adquisiciones de acciones dentro del sector público.
+8,86,,,Adquisición de acciones y participaciones fuera del sector público.
+,86,860,,Adquisición de acciones y participaciones fuera del sector público.
+,,860,860.10,De empresas nacionales.
+,,860,860.20,De empresas de la Unión Europea.
+,,860,860.90,De otras empresas.
+8,87,,,Aportaciones patrimoniales.
+,87,870,,Aportaciones a fundaciones.
+,87,871,,Aportaciones a consorcios.
+,87,872,,Aportaciones a otros entes.
+,,872,872.10,Aportaciones para compensar pérdidas.
+,,872,872.20,Aportaciones para financiar inversiones no rentables.
+,,872,872.90,Resto de aportaciones.
+9,,,,PASIVOS FINANCIEROS.
+9,90,,,Amortización de Deuda Pública en euros.
+,90,900,,Amortización de Deuda Pública en euros a corto plazo.
+,90,901,,Amortización de Deuda Pública en euros a largo plazo.
+9,91,,,Amortización de préstamos y de operaciones en euros.
+,91,910,,Amortización de préstamos a corto plazo de entes del sector público.
+,91,911,,Amortización de préstamos a largo plazo de entes del sector público.
+,91,912,,Amortización de préstamos a corto plazo de entes de fuera del sector Público.
+,91,913,,Amortización de préstamos a largo plazo de entes de fuera del sector público.
+9,92,,,Amortización de Deuda Pública en moneda distinta del euro.
+,92,920,,Amortización de Deuda Pública en moneda distinta del euro a corto plazo.
+,92,921,,Amortización de Deuda Pública en moneda distinta del euro a largo plazo.
+9,93,,,Amortización de préstamos en moneda distinta del euro.
+,93,930,,Amortización de préstamos en moneda distinta del euro a corto plazo.
+,93,931,,Amortización de préstamos en moneda distinta del euro a largo plazo.
+9,94,,,Devolución de depósitos y fianzas.
+,94,940,,Devolución de depósitos.
+,94,941,,Devolución de fianzas.
