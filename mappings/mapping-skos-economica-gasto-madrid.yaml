@@ -1,0 +1,43 @@
+prefixes:
+  foaf: http://xmlns.com/foaf/0.1/
+  xsd: http://www.w3.org/2001/XMLSchema#
+  rdfs: http://www.w3.org/2000/01/rdf-schema#
+  dc: http://purl.org/dc/elements/1.1/
+  dct: http://purl.org/dc/terms/
+  rdf: http://www.w3.org/1999/02/22-rdf-syntax-ns#
+  skos: http://www.w3.org/2004/02/skos/core#
+  owl: http://www.w3.org/2002/07/owl#
+  prog-gasto-madrid: http://vocab.linkeddata.es/datosabiertos/kos/hacienda/presupuesto/programa-gasto/madrid/
+  prog-gasto: http://vocab.linkeddata.es/datosabiertos/kos/hacienda/presupuesto/programa-gasto/
+
+mappings:
+
+  conceptScheme:
+    sources:
+      - [clasificacion-programa-gasto-madrid-descripcion.csv~csv]
+    s: http://vocab.linkeddata.es/datosabiertos/kos/hacienda/presupuesto/programa-gasto/madrid
+    po:
+      - [a,skos:conceptScheme]
+      - [dc:creator,$(creador)]       
+      - [dc:date,$(fecha)]
+      - [dc:title,$(titulo),es~lang]
+      - [skos:prefLabel,$(nombre),es~lang]  
+  jerarquiaSubconcepto:
+    sources:
+      - [clasificacion-programa-gasto-madrid.csv~csv]     
+    s: prog-gasto-madrid:$(subconcepto)
+    po:
+        - [a,skos:Concept]
+        - [skos:inScheme, http://vocab.linkeddata.es/datosabiertos/kos/hacienda/presupuesto/programa-gasto/madrid~iri]
+        - [skos:prefLabel,$(denominacion),es~lang] 
+    po:
+      - p: skos:broader
+        o:
+          - mapping: labelConcepto
+            condition: 
+              function: equal
+              parameters:
+                - [str1, $(concepto)]
+                - [str2, $(concepto)]
+  
+  
