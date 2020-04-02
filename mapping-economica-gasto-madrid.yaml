@@ -7,15 +7,15 @@ prefixes:
   rdf: http://www.w3.org/1999/02/22-rdf-syntax-ns#
   skos: http://www.w3.org/2004/02/skos/core#
   owl: http://www.w3.org/2002/07/owl#
-  econ-gasto-madrid: http://vocab.linkeddata.es/datosabiertos/kos/hacienda/presupuesto/economica-gasto/madrid/
-  econ-gasto: http://vocab.linkeddata.es/datosabiertos/kos/hacienda/presupuesto/economica-gasto/
+  econ-gasto-madrid: http://vocab.linkeddata.es/datosabiertos/kos/hacienda/presupuesto/programa-gasto/madrid/
+  econ-gasto: http://vocab.linkeddata.es/datosabiertos/kos/hacienda/presupuesto/programa-gasto/
 
 mappings:
 
   conceptScheme:
     sources:
-      - [clasificacion-economica-gasto-madrid-descripcion.csv~csv]
-    s: http://vocab.linkeddata.es/datosabiertos/kos/hacienda/presupuesto/economica-gasto/madrid
+      - [clasificacion-programa-gasto-madrid-descripcion.csv~csv]
+    s: http://vocab.linkeddata.es/datosabiertos/kos/hacienda/presupuesto/programa-gasto/madrid
     po:
       - [a,skos:conceptScheme]
       - [dc:creator,$(creador)]       
@@ -30,18 +30,14 @@ mappings:
       - [a,skos:Concept]
       - [skos:inScheme, http://vocab.linkeddata.es/datosabiertos/kos/hacienda/presupuesto/economica-gasto~iri]
       - [skos:prefLabel,$(denominacion),es~lang]  
-  labelSubconcepto:
+  jerarquiaSubconcepto:
     sources:
-      - [clasificacion-economica-gasto-madrid.csv~csv]     
+      - [clasificacion-programa-gasto-madrid.csv~csv]     
     s: econ-gasto-madrid:$(subconcepto)
     po:
         - [a,skos:Concept]
-        - [skos:inScheme, http://vocab.linkeddata.es/datosabiertos/kos/hacienda/presupuesto/economica-gasto/madrid~iri]
+        - [skos:inScheme, http://vocab.linkeddata.es/datosabiertos/kos/hacienda/presupuesto/programa-gasto/madrid~iri]
         - [skos:prefLabel,$(denominacion),es~lang] 
-  jerarquiaSubconcepto:
-    sources:
-      - [clasificacion-economica-gasto-madrid.csv~csv]   
-    s: econ-gasto-madrid:$(subconcepto)
     po:
       - p: skos:broader
         o:
