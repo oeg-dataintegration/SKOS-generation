@@ -1,0 +1,182 @@
+{
+  "prefixes": {
+    "rr": "http://www.w3.org/ns/r2rml#",
+    "foaf": "http://xmlns.com/foaf/0.1/",
+    "xsd": "http://www.w3.org/2001/XMLSchema#",
+    "rdfs": "http://www.w3.org/2000/01/rdf-schema#",
+    "dc": "http://purl.org/dc/elements/1.1/",
+    "dct": "http://purl.org/dc/terms/",
+    "rml": "http://semweb.mmlab.be/ns/rml#",
+    "rdf": "http://www.w3.org/1999/02/22-rdf-syntax-ns#",
+    "skos": "http://www.w3.org/2004/02/skos/core#",
+    "owl": "http://www.w3.org/2002/07/owl#"
+  },
+  "mappings": {
+    "jerarquiaCapitulo": {
+      "sources": [
+        [
+          "data.csv~csv"
+        ]
+      ],
+      "s": "econ-gasto:$(level_0)",
+      "po": [
+        {
+          "p": "skos:narrower",
+          "o": [
+            {
+              "mapping": "labelArticulo",
+              "condition": {
+                "function": "equal",
+                "parameters": [
+                  [
+                    "str1",
+                    "$(level_1)"
+                  ],
+                  [
+                    "str2",
+                    "$(level_1)"
+                  ]
+                ]
+              }
+            }
+          ]
+        }
+      ]
+    },
+    "jerarquiaArticulo": {
+      "sources": [
+        [
+          "data.csv~csv"
+        ]
+      ],
+      "s": "econ-gasto:$(level_1)",
+      "po": [
+        {
+          "p": "skos:narrower",
+          "o": [
+            {
+              "mapping": "labelConcepto",
+              "condition": {
+                "function": "equal",
+                "parameters": [
+                  [
+                    "str1",
+                    "$(level_2)"
+                  ],
+                  [
+                    "str2",
+                    "$(level_2)"
+                  ]
+                ]
+              }
+            }
+          ]
+        },
+        {
+          "p": "skos:broader",
+          "o": [
+            {
+              "mapping": "labelCapitulo",
+              "condition": {
+                "function": "equal",
+                "parameters": [
+                  [
+                    "str1",
+                    "$(level_1)"
+                  ],
+                  [
+                    "str2",
+                    "$(level_1)"
+                  ]
+                ]
+              }
+            }
+          ]
+        }
+      ]
+    },
+    "jerarquiaConcepto": {
+      "sources": [
+        [
+          "data.csv~csv"
+        ]
+      ],
+      "s": "econ-gasto:$(concepto)",
+      "po": [
+        {
+          "p": "skos:narrower",
+          "o": [
+            {
+              "mapping": "labelSubconcepto",
+              "condition": {
+                "function": "equal",
+                "parameters": [
+                  [
+                    "str1",
+                    "$(level_3)"
+                  ],
+                  [
+                    "str2",
+                    "$(level_3)"
+                  ]
+                ]
+              }
+            }
+          ]
+        },
+        {
+          "p": "skos:broader",
+          "o": [
+            {
+              "mapping": "labelArticulo",
+              "condition": {
+                "function": "equal",
+                "parameters": [
+                  [
+                    "str1",
+                    "$(level_2)"
+                  ],
+                  [
+                    "str2",
+                    "$(level_2)"
+                  ]
+                ]
+              }
+            }
+          ]
+        }
+      ]
+    },
+    "jerarquiaSuboncepto_1": {
+      "sources": [
+        [
+          "data.csv~csv"
+        ]
+      ],
+      "s": "econ-gasto:$(subconcepto)",
+      "po": [
+        {
+          "p": "skos:broader",
+          "o": [
+            {
+              "mapping": "labelConcepto",
+              "condition": {
+                "function": "equal",
+                "parameters": [
+                  [
+                    "str1",
+                    "$(level_3)"
+                  ],
+                  [
+                    "str2",
+                    "$(level_3)"
+                  ]
+                ]
+              }
+            }
+          ]
+        }
+      ]
+    }
+  }
+}

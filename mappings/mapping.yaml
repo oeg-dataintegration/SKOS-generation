@@ -11,50 +11,72 @@ prefixes:
   owl: http://www.w3.org/2002/07/owl#
 
 mappings:
-  terms1:
+  jerarquiaCapitulo:
     sources:
-      - [clasificacion-economica-gasto1.csv~csv]
-    s: http://vocab.linkeddata.es/datosabiertos/kos/hacienda/presupuesto/economica-gasto
+     - [data.csv~csv]     
+    s: econ-gasto:$(level_0)
     po:
-      - [a, skos:ConceptScheme]
-      - [skos:hasTopConcept,http://vocab.linkeddata.es/datosabiertos/kos/hacienda/presupuesto/economica-gasto/$(capitulo)~iri]
-  terms2:
+      - p: skos:narrower
+        o:
+          - mapping: labelArticulo
+            condition: 
+              function: equal
+              parameters:
+                - [str1, $(level_1)]
+                - [str2, $(level_1)]
+  jerarquiaArticulo:
     sources:
-     - [clasificacion-economica-gasto1.csv~csv]     
-    s: http://vocab.linkeddata.es/datosabiertos/kos/hacienda/presupuesto/economica-gasto/capitulo#$(capitulo)
+     - [data.csv~csv]     
+    s: econ-gasto:$(level_1)
     po:
-      - [a,skos:Concept]
-      - [skos:inScheme, http:vocab.linkeddata.es/datosabiertos/kos/hacienda/presupuesto/economica-gasto~iri]
-      - [skos:prefLabel,$(denominacion),es~lang]
-      - [skos:narrower, http://vocab.linkeddata.es/datosabiertos/kos/hacienda/presupuesto/economica-gasto/$(articulo)~iri]
+      - p: skos:narrower
+        o:
+          - mapping: labelConcepto
+            condition: 
+              function: equal
+              parameters:
+                - [str1, $(level_2)]
+                - [str2, $(level_2)]
+      - p: skos:broader
+        o:
+          - mapping: labelCapitulo
+            condition: 
+              function: equal
+              parameters:
+                - [str1, $(level_1)]
+                - [str2, $(level_1)]
+  jerarquiaConcepto:
+    sources:
+     - [data.csv~csv]     
+    s: econ-gasto:$(concepto)
+    po:
+      - p: skos:narrower
+        o:
+          - mapping: labelSubconcepto
+            condition: 
+              function: equal
+              parameters:
+                - [str1, $(level_3)]
+                - [str2, $(level_3)]
+      - p: skos:broader
+        o:
+          - mapping: labelArticulo
+            condition: 
+              function: equal
+              parameters:
+                - [str1, $(level_2)]
+                - [str2, $(level_2)]    
 
-  terms3:
+  jerarquiaSuboncepto_1:
     sources:
-     - [clasificacion-economica-gasto1.csv~csv]     
-    s: http://vocab.linkeddata.es/datosabiertos/kos/hacienda/presupuesto/economica-gasto/articulo#$(articulo)
-    po:
-      - [a,skos:Concept]
-      - [skos:inScheme, http:vocab.linkeddata.es/datosabiertos/kos/hacienda/presupuesto/economica-gasto~iri]
-      - [skos:prefLabel,$(denominacion),es~lang]
-      - [skos:narrower, http://vocab.linkeddata.es/datosabiertos/kos/hacienda/presupuesto/economica-gasto/$(concepto)~iri] 
-      - [skos:broader, http://vocab.linkeddata.es/datosabiertos/kos/hacienda/presupuesto/economica-gasto/$(capitulo)~iri]
-terms4:
-    sources:
-     - [clasificacion-economica-gasto1.csv~csv]     
-    s: http://vocab.linkeddata.es/datosabiertos/kos/hacienda/presupuesto/economica-gasto/concepto#$(concepto)
-    po:
-      - [a,skos:Concept]
-      - [skos:inScheme, http:vocab.linkeddata.es/datosabiertos/kos/hacienda/presupuesto/economica-gasto~iri]
-      - [skos:prefLabel,$(denominacion),es~lang]
-      - [skos:narrower, http://vocab.linkeddata.es/datosabiertos/kos/hacienda/presupuesto/economica-gasto/$(subconcepto)~iri] 
-      - [skos:broader, http://vocab.linkeddata.es/datosabiertos/kos/hacienda/presupuesto/economica-gasto/$(articulo)~iri] 
-
-terms5:
-    sources:
-     - [clasificacion-economica-gasto1.csv~csv]     
-    s: http://vocab.linkeddata.es/datosabiertos/kos/hacienda/presupuesto/economica-gasto/subconcepto#$(subconcepto)
-    po:
-      - [a,skos:Concept]
-      - [skos:inScheme, http:vocab.linkeddata.es/datosabiertos/kos/hacienda/presupuesto/economica-gasto~iri]
-      - [skos:prefLabel,$(denominacion),es~lang]
-      - [skos:broader, http://vocab.linkeddata.es/datosabiertos/kos/hacienda/presupuesto/economica-gasto/$(concepto)~iri] 
+     - [data.csv~csv]     
+    s: econ-gasto:$(subconcepto)
+    po:  
+      - p: skos:broader
+        o:
+          - mapping: labelConcepto
+            condition: 
+              function: equal
+              parameters:
+                - [str1, $(level_3)]
+                - [str2, $(level_3)]                
