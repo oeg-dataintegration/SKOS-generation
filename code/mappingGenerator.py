@@ -49,4 +49,4 @@ class MappingGenerator:
                     if(' ' in po[1] or '[' in po[1] or ']' in po[1] or ':' in po[1]):
                         self.jsonMapping["mappings"][tm]["po"][i][1] = '"' + po[1] + '"'
         self.yamlMapping = str(yaml.dump({"prefixes":self.jsonMapping["prefixes"]}, default_flow_style=False))
-        self.yamlMapping +=  str(yaml.dump({"mappings":self.jsonMapping["mappings"]}, default_flow_style=None)).replace("'\"", '"').replace("\"'",'"').replace('\'', '')
+        self.yamlMapping +=  str(yaml.dump({"mappings":self.jsonMapping["mappings"]}, default_flow_style=None)).replace('"', '')

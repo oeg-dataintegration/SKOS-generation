@@ -157,87 +157,87 @@ mappings:
     - [data.csv~csv]
   labelArticulo:
     po:
-    - [a, """skos:Concept"""]
-    - [skos:inScheme, """http://vocab.linkeddata.es/datosabiertos/kos/hacienda/presupuesto/economica-gasto~iri"""]
-    - [skos:prefLabel, $(denominacion), es~lang]
+    - [a, 'skos:Concept']
+    - ['skos:inScheme', 'http://vocab.linkeddata.es/datosabiertos/kos/hacienda/presupuesto/economica-gasto~iri']
+    - ['skos:prefLabel', $(denominacion), es~lang]
     s: specificTaxonomy:$(level_1)
     sources:
     - [data.csv~csv]
   labelCapitulo:
     po:
-    - [a, """skos:Concept"""]
-    - [skos:inScheme, """http://vocab.linkeddata.es/datosabiertos/kos/hacienda/presupuesto/economica-gasto~iri"""]
-    - [skos:prefLabel, $(denominacion), es~lang]
+    - [a, 'skos:Concept']
+    - ['skos:inScheme', 'http://vocab.linkeddata.es/datosabiertos/kos/hacienda/presupuesto/economica-gasto~iri']
+    - ['skos:prefLabel', $(denominacion), es~lang]
     s: specificTaxonomy:$(level_0)
     sources:
     - [data.csv~csv]
   labelConcepto:
     po:
-    - [a, ""skos:Concept""]
-    - [skos:inScheme, ""http://vocab.linkeddata.es/datosabiertos/kos/hacienda/presupuesto/economica-gasto~iri""]
-    - [skos:prefLabel, $(denominacion), es~lang]
+    - [a, 'skos:Concept']
+    - ['skos:inScheme', 'http://vocab.linkeddata.es/datosabiertos/kos/hacienda/presupuesto/economica-gasto~iri']
+    - ['skos:prefLabel', $(denominacion), es~lang]
     s: specificTaxonomy:$(level_2)
     sources:
     - [data.csv~csv]
   labelSubconcepto:
     po:
-    - [a, ""skos:Concept""]
-    - [skos:inScheme, ""http://vocab.linkeddata.es/datosabiertos/kos/hacienda/presupuesto/economica-gasto~iri""]
-    - [skos:prefLabel, $(denominacion), es~lang]
+    - [a, 'skos:Concept']
+    - ['skos:inScheme', 'http://vocab.linkeddata.es/datosabiertos/kos/hacienda/presupuesto/economica-gasto~iri']
+    - ['skos:prefLabel', $(denominacion), es~lang]
     s: specificTaxonomy:$(level_3)
     sources:
     - [data.csv~csv]
   labelSubconcepto_2:
     po:
-    - [a, "skos:Concept"]
-    - [skos:inScheme, "http://vocab.linkeddata.es/datosabiertos/kos/hacienda/presupuesto/economica-gasto~iri"]
-    - [skos:prefLabel, $(denominacion), es~lang]
+    - [a, 'skos:Concept']
+    - ['skos:inScheme', 'http://vocab.linkeddata.es/datosabiertos/kos/hacienda/presupuesto/economica-gasto~iri']
+    - ['skos:prefLabel', $(denominacion), es~lang]
     s: specificTaxonomy:$(level_4)
     sources:
     - [data.csv~csv]
   labelSubconcepto_3:
     po:
-    - [a, "skos:Concept"]
-    - [skos:inScheme, "http://vocab.linkeddata.es/datosabiertos/kos/hacienda/presupuesto/economica-gasto~iri"]
-    - [skos:prefLabel, $(denominacion), es~lang]
+    - [a, 'skos:Concept']
+    - ['skos:inScheme', 'http://vocab.linkeddata.es/datosabiertos/kos/hacienda/presupuesto/economica-gasto~iri']
+    - ['skos:prefLabel', $(denominacion), es~lang]
     s: specificTaxonomy:$(level_5)
     sources:
     - [data.csv~csv]
   labelSubconcepto_4:
     po:
-    - [a, "skos:Concept"]
-    - [skos:inScheme, "http://vocab.linkeddata.es/datosabiertos/kos/hacienda/presupuesto/economica-gasto~iri"]
-    - [skos:prefLabel, $(denominacion), es~lang]
+    - [a, 'skos:Concept']
+    - ['skos:inScheme', 'http://vocab.linkeddata.es/datosabiertos/kos/hacienda/presupuesto/economica-gasto~iri']
+    - ['skos:prefLabel', $(denominacion), es~lang]
     s: specificTaxonomy:$(level_6)
     sources:
     - [data.csv~csv]
   labelSubconcepto_5:
     po:
-    - [a, "skos:Concept"]
-    - [skos:inScheme, "http://vocab.linkeddata.es/datosabiertos/kos/hacienda/presupuesto/economica-gasto~iri"]
-    - [skos:prefLabel, $(denominacion), es~lang]
+    - [a, 'skos:Concept']
+    - ['skos:inScheme', 'http://vocab.linkeddata.es/datosabiertos/kos/hacienda/presupuesto/economica-gasto~iri']
+    - ['skos:prefLabel', $(denominacion), es~lang]
     s: specificTaxonomy:$(level_7)
     sources:
     - [data.csv~csv]
   labelSubconcepto_6:
     po:
-    - [a, "skos:Concept"]
-    - [skos:inScheme, "http://vocab.linkeddata.es/datosabiertos/kos/hacienda/presupuesto/economica-gasto~iri"]
-    - [skos:prefLabel, $(denominacion), es~lang]
+    - [a, 'skos:Concept']
+    - ['skos:inScheme', 'http://vocab.linkeddata.es/datosabiertos/kos/hacienda/presupuesto/economica-gasto~iri']
+    - ['skos:prefLabel', $(denominacion), es~lang]
     s: specificTaxonomy:$(level_8)
     sources:
     - [data.csv~csv]
   labelSubconcepto_7:
     po:
-    - [a, "skos:Concept"]
-    - [skos:inScheme, "http://vocab.linkeddata.es/datosabiertos/kos/hacienda/presupuesto/economica-gasto~iri"]
-    - [skos:prefLabel, $(denominacion), es~lang]
+    - [a, 'skos:Concept']
+    - ['skos:inScheme', 'http://vocab.linkeddata.es/datosabiertos/kos/hacienda/presupuesto/economica-gasto~iri']
+    - ['skos:prefLabel', $(denominacion), es~lang]
     s: specificTaxonomy:$(level_9)
     sources:
     - [data.csv~csv]
   topConcept:
     po:
-    - [skos:hasTopConcept, """specificTaxonomy:$(level_0)~iri"""]
+    - ['skos:hasTopConcept', 'specificTaxonomy:$(level_0)~iri']
     s: http://vocab.linkeddata.es/datosabiertos/kos/hacienda/presupuesto/economica-gasto#
     sources:
     - [data.csv~csv]
