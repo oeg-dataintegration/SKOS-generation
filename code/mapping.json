@@ -1,17 +1,122 @@
 {
   "prefixes": {
-    "rr": "http://www.w3.org/ns/r2rml#",
     "foaf": "http://xmlns.com/foaf/0.1/",
     "xsd": "http://www.w3.org/2001/XMLSchema#",
     "rdfs": "http://www.w3.org/2000/01/rdf-schema#",
     "dc": "http://purl.org/dc/elements/1.1/",
     "dct": "http://purl.org/dc/terms/",
-    "rml": "http://semweb.mmlab.be/ns/rml#",
     "rdf": "http://www.w3.org/1999/02/22-rdf-syntax-ns#",
     "skos": "http://www.w3.org/2004/02/skos/core#",
-    "owl": "http://www.w3.org/2002/07/owl#"
+    "owl": "http://www.w3.org/2002/07/owl#",
+    "econ-gasto": "http://vocab.linkeddata.es/datosabiertos/kos/hacienda/presupuesto/economica-gasto/"
   },
   "mappings": {
+    "topConcept": {
+      "sources": [
+        [
+          "data.csv~csv"
+        ]
+      ],
+      "s": "http://vocab.linkeddata.es/datosabiertos/kos/hacienda/presupuesto/economica-gasto#",
+      "po": [
+        [
+          "ex:hasTopConcept",
+          "econ-gasto:$(level_0)~iri"
+        ]
+      ]
+    },
+    "labelCapitulo": {
+      "sources": [
+        [
+          "data.csv~csv"
+        ]
+      ],
+      "s": "econ-gasto:$(level_0)",
+      "po": [
+        [
+          "a",
+          "skos:Concept"
+        ],
+        [
+          "skos:inScheme",
+          "http://vocab.linkeddata.es/datosabiertos/kos/hacienda/presupuesto/economica-gasto~iri"
+        ],
+        [
+          "skos:prefLabel",
+          "$(denominacion)",
+          "es~lang"
+        ]
+      ]
+    },
+    "labelArticulo": {
+      "sources": [
+        [
+          "data.csv~csv"
+        ]
+      ],
+      "s": "econ-gasto:$(level_1)",
+      "po": [
+        [
+          "a",
+          "skos:Concept"
+        ],
+        [
+          "skos:inScheme",
+          "http://vocab.linkeddata.es/datosabiertos/kos/hacienda/presupuesto/economica-gasto~iri"
+        ],
+        [
+          "skos:prefLabel",
+          "$(denominacion)",
+          "es~lang"
+        ]
+      ]
+    },
+    "labelConcepto": {
+      "sources": [
+        [
+          "data.csv~csv"
+        ]
+      ],
+      "s": "econ-gasto:$(level_2)",
+      "po": [
+        [
+          "a",
+          "skos:Concept"
+        ],
+        [
+          "skos:inScheme",
+          "http://vocab.linkeddata.es/datosabiertos/kos/hacienda/presupuesto/economica-gasto~iri"
+        ],
+        [
+          "skos:prefLabel",
+          "$(denominacion)",
+          "es~lang"
+        ]
+      ]
+    },
+    "labelSubconcepto": {
+      "sources": [
+        [
+          "data.csv~csv"
+        ]
+      ],
+      "s": "econ-gasto:$(level_3)",
+      "po": [
+        [
+          "a",
+          "skos:Concept"
+        ],
+        [
+          "skos:inScheme",
+          "http://vocab.linkeddata.es/datosabiertos/kos/hacienda/presupuesto/economica-gasto~iri"
+        ],
+        [
+          "skos:prefLabel",
+          "$(denominacion)",
+          "es~lang"
+        ]
+      ]
+    },
     "jerarquiaCapitulo": {
       "sources": [
         [
@@ -101,7 +206,7 @@
           "data.csv~csv"
         ]
       ],
-      "s": "econ-gasto:$(concepto)",
+      "s": "econ-gasto:$(level_2)",
       "po": [
         {
           "p": "skos:narrower",
@@ -153,7 +258,7 @@
           "data.csv~csv"
         ]
       ],
-      "s": "econ-gasto:$(subconcepto)",
+      "s": "econ-gasto:$(level_3)",
       "po": [
         {
           "p": "skos:broader",
