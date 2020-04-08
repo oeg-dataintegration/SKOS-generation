@@ -15,15 +15,41 @@ class MappingGenerator:
         j = 2
         for i in  range(self.nCols):
             if(i < 4):
-                for tm in MappingGenerator.mappingStructure["levels"][keys[i]]:
-                    self.jsonMapping["mappings"].update(tm)
+                if(i == self.nCols - 1):
+
+                    for k,tm in enumerate(MappingGenerator.mappingStructure["levels"][keys[i]]):
+                        if(k < len(MappingGenerator.mappingStructure["levels"][keys[i]]) - 1):
+                            self.jsonMapping["mappings"].update(tm)
+                        else:
+                            key = list(tm.keys())[0]
+                            result = {
+                                    key:{
+                                        "sources": tm[key]["sources"],
+                                        "s": tm[key]["s"],
+                                        "po": [ tm[key]["po"][po] for po in range(len(tm[key]["po"]) - 1)]
+                                        }
+                                    }
+                            self.jsonMapping["mappings"].update(result)
+                else:                
+                    for tm in MappingGenerator.mappingStructure["levels"][keys[i]]:
+                        self.jsonMapping["mappings"].update(tm)
             else:
-                z = i - 1
-                for tm in MappingGenerator.mappingStructure["levels"][keys[4]]:
+                prevLevel = i - 1
+                prevSubConcept = j - 1
+                nextLevel = i + 1
+                nextSubConcept = j + 1
+                tms = MappingGenerator.mappingStructure["levels"][keys[4]]
+                if(i == self.nCols -1):
+                    key = list(tms[-1].keys())[0]
+                    tms[-1][key]["po"] = tms[-1][key]["po"][:-1]
+                for tm in tms:
                     strTM = str(tm)
-                    strTM = strTM.replace("_y", '_' + str(j))
-                    strTM = strTM.replace("_x", '_' + str(i))
-                    strTM = strTM.replace("_z", '_' + str(z))
+                    strTM = strTM.replace("_CURRENTSBC", '_' + str(j))
+                    strTM = strTM.replace("_CURRENTLVL", '_' + str(i))
+                    strTM = strTM.replace("_PREVLVL", '_' + str(prevLevel))
+                    strTM = strTM.replace("_PREVSBC", '_' + str(prevSubConcept))
+                    strTM = strTM.replace("_NXTLVL", '_' + str(nextLevel))
+                    strTM = strTM.replace("_NXTSBC", '_' + str(nextSubConcept))
                     self.jsonMapping["mappings"].update(json.loads(strTM.replace("'", '"')))
                 j = j +1
         #print(json.dumps(self.jsonMapping, indent=2))

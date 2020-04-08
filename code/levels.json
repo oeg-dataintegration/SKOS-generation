@@ -116,6 +116,27 @@
                     "s": "specificTaxonomy:$(level_1)",
                     "po": [
                       {
+                        "p": "skos:broader",
+                        "o": [
+                          {
+                            "mapping": "labelCapitulo",
+                            "condition": {
+                              "function": "equal",
+                              "parameters": [
+                                [
+                                  "str1",
+                                  "$(level_0)"
+                                ],
+                                [
+                                  "str2",
+                                  "$(level_0)"
+                                ]
+                              ]
+                            }
+                          }
+                        ]
+                      },
+                      {
                         "p": "skos:narrower",
                         "o": [
                           {
@@ -135,28 +156,7 @@
                             }
                           }
                         ]
-                      },
-                      {
-                        "p": "skos:broader",
-                        "o": [
-                          {
-                            "mapping": "labelCapitulo",
-                            "condition": {
-                              "function": "equal",
-                              "parameters": [
-                                [
-                                  "str1",
-                                  "$(level_1)"
-                                ],
-                                [
-                                  "str2",
-                                  "$(level_1)"
-                                ]
-                              ]
-                            }
-                          }
-                        ]
-                      }
+                      }                      
                     ]
                   }                
             }
@@ -197,27 +197,6 @@
                     "s": "specificTaxonomy:$(level_2)",
                     "po": [
                       {
-                        "p": "skos:narrower",
-                        "o": [
-                          {
-                            "mapping": "labelSubconcepto",
-                            "condition": {
-                              "function": "equal",
-                              "parameters": [
-                                [
-                                  "str1",
-                                  "$(level_3)"
-                                ],
-                                [
-                                  "str2",
-                                  "$(level_3)"
-                                ]
-                              ]
-                            }
-                          }
-                        ]
-                      },
-                      {
                         "p": "skos:broader",
                         "o": [
                           {
@@ -237,14 +216,35 @@
                             }
                           }
                         ]
-                      }
+                      },
+                      {
+                        "p": "skos:narrower",
+                        "o": [
+                          {
+                            "mapping": "labelSubconcepto_1",
+                            "condition": {
+                              "function": "equal",
+                              "parameters": [
+                                [
+                                  "str1",
+                                  "$(level_3)"
+                                ],
+                                [
+                                  "str2",
+                                  "$(level_3)"
+                                ]
+                              ]
+                            }
+                          }
+                        ]
+                      }                      
                     ]
                   }                
             }
         ],
         "level_3":[
           {
-            "labelSubconcepto": {
+            "labelSubconcepto_1": {
               "sources": [
                 [
                   "data.csv~csv"
@@ -297,20 +297,41 @@
                             }
                           }
                         ]
-                      }
+                      },
+                      {
+                        "p": "skos:broader",
+                        "o": [
+                          {
+                            "mapping": "labelSubconcepto_2",
+                            "condition": {
+                              "function": "equal",
+                              "parameters": [
+                                [
+                                  "str1",
+                                  "$(level_4)"
+                                ],
+                                [
+                                  "str2",
+                                  "$(level_4)"
+                                ]
+                              ]
+                            }
+                          }
+                        ]
+                      }                      
                     ]
                   }                
             }
         ],
         "level_x":[
           {
-            "labelSubconcepto_y": {
+            "labelSubconcepto_CURRENTSBC": {
               "sources": [
                 [
                   "data.csv~csv"
                 ]
               ],
-              "s": "specificTaxonomy:$(level_x)",
+              "s": "specificTaxonomy:$(level_CURRENTLVL)",
               "po": [
                 [
                   "a",
@@ -329,35 +350,56 @@
             }            
           },
             {
-                "jerarquiaSuboncepto_y": {
+                "jerarquiaSuboncepto_CURRENTSBC": {
                     "sources": [
                       [
                         "data.csv~csv"
                       ]
                     ],
-                    "s": "specificTaxonomy:$(level_x)",
+                    "s": "specificTaxonomy:$(level_CURRENTLVL)",
                     "po": [
                       {
                         "p": "skos:broader",
                         "o": [
                           {
-                            "mapping": "labelSubconcepto_z",
+                            "mapping": "labelSubconcepto_PREVSBC",
                             "condition": {
                               "function": "equal",
                               "parameters": [
                                 [
                                   "str1",
-                                  "$(level_x)"
+                                  "$(level_PREVLVL)"
                                 ],
                                 [
                                   "str2",
-                                  "$(level_x)"
+                                  "$(level_PREVLVL)"
                                 ]
                               ]
                             }
                           }
                         ]
-                      }
+                      },
+                      {
+                        "p": "skos:narrower",
+                        "o": [
+                          {
+                            "mapping": "labelSubconcepto_NXTSBC",
+                            "condition": {
+                              "function": "equal",
+                              "parameters": [
+                                [
+                                  "str1",
+                                  "$(level_NXTLVL)"
+                                ],
+                                [
+                                  "str2",
+                                  "$(level_NXTLVL)"
+                                ]
+                              ]
+                            }
+                          }
+                        ]
+                      }                      
                     ]
                   }                
             }
