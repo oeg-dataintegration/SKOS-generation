@@ -1,0 +1,142 @@
+prefixes:
+  foaf: http://xmlns.com/foaf/0.1/
+  xsd: http://www.w3.org/2001/XMLSchema#
+  rdfs: http://www.w3.org/2000/01/rdf-schema#
+  dc: http://purl.org/dc/elements/1.1/
+  dct: http://purl.org/dc/terms/
+  rdf: http://www.w3.org/1999/02/22-rdf-syntax-ns#
+  skos: http://www.w3.org/2004/02/skos/core#
+  owl: http://www.w3.org/2002/07/owl#
+  econ-gasto: http://vocab.linkeddata.es/datosabiertos/kos/hacienda/presupuesto/economica-gasto/
+
+mappings:
+
+  conceptScheme:
+    sources:
+      - [clasificacion-economica-gasto-descripcion.csv~csv]
+    s: http://vocab.linkeddata.es/datosabiertos/kos/hacienda/presupuesto/economica-gasto
+    po:
+      - [a,skos:conceptScheme]
+      - [dc:creator,$(creador)]       
+      - [dc:date,$(fecha)]
+      - [dc:title,$(titulo),es~lang]
+      - [skos:prefLabel,$(nombre),es~lang]
+  topConcept:
+    sources:
+      - [clasificacion-economica-gasto-labels-extended.csv~csv]  
+    s: http://vocab.linkeddata.es/datosabiertos/kos/hacienda/presupuesto/economica-gasto
+    po:
+        - [skos:hasTopConcept,econ-gasto:$(capitulo)~iri]  
+  labelDefinitionCapitulo:
+    sources:
+      - [clasificacion-economica-gasto-labels-extended.csv~csv]     
+    s: econ-gasto:$(capitulo)
+    po:
+        - [a,skos:Concept]
+        - [skos:inScheme, http://vocab.linkeddata.es/datosabiertos/kos/hacienda/presupuesto/economica-gasto~iri]
+        - [skos:prefLabel,$(denominacionEsp),es~lang] 
+        - [skos:prefLabel,$(denominacionEng),en~lang] 
+        - [skos:definition,$(definicionEsp),es~lang] 
+        - [skos:definition,$(definicionEng),en~lang] 
+  labelDefinitionArticulo:
+    sources:
+      - [clasificacion-economica-gasto-labels-extended.csv~csv]     
+    s: econ-gasto:$(articulo)
+    po:
+        - [a,skos:Concept]
+        - [skos:inScheme, http://vocab.linkeddata.es/datosabiertos/kos/hacienda/presupuesto/economica-gasto~iri]
+        - [skos:prefLabel,$(denominacionEsp),es~lang] 
+        - [skos:prefLabel,$(denominacionEng),en~lang] 
+        - [skos:definition,$(definicionEsp),es~lang] 
+        - [skos:definition,$(definicionEng),en~lang] 
+  labelDefinitionConcepto:
+    sources:
+     - [clasificacion-economica-gasto-labels-extended.csv~csv]     
+    s: econ-gasto:$(concepto)
+    po:
+        - [a,skos:Concept]
+        - [skos:inScheme, http://vocab.linkeddata.es/datosabiertos/kos/hacienda/presupuesto/economica-gasto~iri]
+        - [skos:prefLabel,$(denominacionEsp),es~lang] 
+        - [skos:prefLabel,$(denominacionEng),en~lang] 
+        - [skos:definition,$(definicionEsp),es~lang] 
+        - [skos:definition,$(definicionEng),en~lang] 
+  labelDefinitionSubconcepto:
+    sources:
+     - [clasificacion-economica-gasto-labels-extended.csv~csv]     
+    s: econ-gasto:$(subconcepto)
+    po:
+        - [a,skos:Concept]
+        - [skos:inScheme, http://vocab.linkeddata.es/datosabiertos/kos/hacienda/presupuesto/economica-gasto~iri]
+        - [skos:prefLabel,$(denominacionEsp),es~lang] 
+        - [skos:prefLabel,$(denominacionEng),en~lang] 
+        - [skos:definition,$(definicionEsp),es~lang] 
+        - [skos:definition,$(definicionEng),en~lang]  
+  jerarquiaCapitulo:
+    sources:
+     - [clasificacion-economica-gasto-jerarquia.csv~csv]     
+    s: econ-gasto:$(capitulo)
+    po:
+      - p: skos:narrower
+        o:
+          - mapping: labelArticulo
+            condition: 
+              function: equal
+              parameters:
+                - [str1, $(articulo)]
+                - [str2, $(articulo)]
+  jerarquiaArticulo:
+    sources:
+     - [clasificacion-economica-gasto-jerarquia.csv~csv]     
+    s: econ-gasto:$(articulo)
+    po:
+      - p: skos:narrower
+        o:
+          - mapping: labelConcepto
+            condition: 
+              function: equal
+              parameters:
+                - [str1, $(concepto)]
+                - [str2, $(concepto)]
+      - p: skos:broader
+        o:
+          - mapping: labelCapitulo
+            condition: 
+              function: equal
+              parameters:
+                - [str1, $(capitulo)]
+                - [str2, $(capitulo)]
+  jerarquiaConcepto:
+    sources:
+     - [clasificacion-economica-gasto-jerarquia.csv~csv]     
+    s: econ-gasto:$(concepto)
+    po:
+      - p: skos:narrower
+        o:
+          - mapping: labelSubconcepto
+            condition: 
+              function: equal
+              parameters:
+                - [str1, $(subconcepto)]
+                - [str2, $(subconcepto)]
+      - p: skos:broader
+        o:
+          - mapping: labelArticulo
+            condition: 
+              function: equal
+              parameters:
+                - [str1, $(articulo)]
+                - [str2, $(articulo)]
+  jerarquiaSuboncepto:
+    sources:
+     - [clasificacion-economica-gasto-jerarquia.csv~csv]     
+    s: econ-gasto:$(subconcepto)
+    po:  
+      - p: skos:broader
+        o:
+          - mapping: labelConcepto
+            condition: 
+              function: equal
+              parameters:
+                - [str1, $(concepto)]
+                - [str2, $(concepto)]
+  
