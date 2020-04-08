@@ -23,7 +23,7 @@ mappings:
       - [skos:prefLabel,$(nombre),es~lang]
   topConcept:
     sources:
-      - [clasificacion-economica-gasto-labels-extended.csv~csv]  
+      - [clasificacion-economica-gasto-labels.csv~csv]  
     s: http://vocab.linkeddata.es/datosabiertos/kos/hacienda/presupuesto/economica-gasto
     po:
         - [skos:hasTopConcept,econ-gasto:$(capitulo)~iri]  
@@ -78,7 +78,7 @@ mappings:
     po:
       - p: skos:narrower
         o:
-          - mapping: labelArticulo
+          - mapping: labelDefinitionArticulo
             condition: 
               function: equal
               parameters:
@@ -91,7 +91,7 @@ mappings:
     po:
       - p: skos:narrower
         o:
-          - mapping: labelConcepto
+          - mapping: labelDefinitionConcepto
             condition: 
               function: equal
               parameters:
@@ -99,7 +99,7 @@ mappings:
                 - [str2, $(concepto)]
       - p: skos:broader
         o:
-          - mapping: labelCapitulo
+          - mapping: labelDefinitionCapitulo
             condition: 
               function: equal
               parameters:
@@ -112,7 +112,7 @@ mappings:
     po:
       - p: skos:narrower
         o:
-          - mapping: labelSubconcepto
+          - mapping: labelDefinitionSubconcepto
             condition: 
               function: equal
               parameters:
@@ -120,7 +120,7 @@ mappings:
                 - [str2, $(subconcepto)]
       - p: skos:broader
         o:
-          - mapping: labelArticulo
+          - mapping: labelDefinitionArticulo
             condition: 
               function: equal
               parameters:
@@ -133,7 +133,7 @@ mappings:
     po:  
       - p: skos:broader
         o:
-          - mapping: labelConcepto
+          - mapping: labelDefinitionConcepto
             condition: 
               function: equal
               parameters:
