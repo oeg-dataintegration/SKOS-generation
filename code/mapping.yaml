@@ -80,7 +80,7 @@ mappings:
   label:
     po:
     - [a, 'skos:Concept']
-    - ['skos:inScheme', 'specificTaxonomy:#~iri']
+    - ['skos:inScheme', 'specificTaxonomy:~iri']
     - ['skos:prefLabel', $(label), es~lang]
     s: specificTaxonomy:$(id)
     sources:
@@ -88,6 +88,6 @@ mappings:
   topConcept:
     po:
     - ['skos:hasTopConcept', 'specificTaxonomy:$(level_0)~iri']
-    s: specificTaxonomy:#
+    s: 'specificTaxonomy:'
     sources:
     - [data.csv~csv]
