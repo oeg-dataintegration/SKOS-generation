@@ -112,7 +112,7 @@
 :pm_7 rr:constant skos:inScheme.
 :pom_7 rr:objectMap :om_7.
 :om_7 a rr:ObjectMap;
-    rr:constant "http://vocab.linkeddata.es/datosabiertos/kos/hacienda/presupuesto/economica-gasto";
+    rr:constant "http://example.com/exampleTaxonomy/#";
     rr:termType rr:IRI.
 :pom_8 a rr:PredicateObjectMap.
 :map_label_0 rr:predicateObjectMap :pom_8.
@@ -132,7 +132,7 @@
     rdfs:label "topConcept".
 :s_5 a rr:SubjectMap.
 :map_topConcept_0 rr:subjectMap :s_5.
-:s_5 rr:constant "http://vocab.linkeddata.es/datosabiertos/kos/hacienda/presupuesto/economica-gasto#".
+:s_5 rr:constant "http://example.com/exampleTaxonomy/#".
 :pom_9 a rr:PredicateObjectMap.
 :map_topConcept_0 rr:predicateObjectMap :pom_9.
 :pm_9 a rr:PredicateMap.
@@ -145,30 +145,30 @@
 :om_0 a rr:ObjectMap;
     rr:parentTriplesMap :map_label_0;
     rr:joinCondition :jc_0.
-:jc_0 rr:child "id";
-    rr:parent "level_0".
+:jc_0 rr:child "level_0";
+    rr:parent "id".
 :om_1 a rr:ObjectMap;
     rr:parentTriplesMap :map_label_0;
     rr:joinCondition :jc_1.
-:jc_1 rr:child "id";
-    rr:parent "level_2".
+:jc_1 rr:child "level_2";
+    rr:parent "id".
 :om_2 a rr:ObjectMap;
     rr:parentTriplesMap :map_label_0;
     rr:joinCondition :jc_2.
-:jc_2 rr:child "id";
-    rr:parent "level_1".
+:jc_2 rr:child "level_1";
+    rr:parent "id".
 :om_3 a rr:ObjectMap;
     rr:parentTriplesMap :map_label_0;
     rr:joinCondition :jc_3.
-:jc_3 rr:child "id";
-    rr:parent "level_2".
+:jc_3 rr:child "level_2";
+    rr:parent "id".
 :om_4 a rr:ObjectMap;
     rr:parentTriplesMap :map_label_0;
     rr:joinCondition :jc_4.
-:jc_4 rr:child "id";
-    rr:parent "level_3".
+:jc_4 rr:child "level_3";
+    rr:parent "id".
 :om_5 a rr:ObjectMap;
     rr:parentTriplesMap :map_label_0;
     rr:joinCondition :jc_5.
-:jc_5 rr:child "id";
-    rr:parent "level_3".
+:jc_5 rr:child "level_3";
+    rr:parent "id".

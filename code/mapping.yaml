@@ -15,16 +15,16 @@ mappings:
       - condition:
           function: equal
           parameters:
-          - [str1, $(id)]
-          - [str2, $(level_0)]
+          - [str1, $(level_0)]
+          - [str2, $(id)]
         mapping: label
       p: skos:broader
     - o:
       - condition:
           function: equal
           parameters:
-          - [str1, $(id)]
-          - [str2, $(level_2)]
+          - [str1, $(level_2)]
+          - [str2, $(id)]
         mapping: label
       p: skos:narrower
     s: specificTaxonomy:$(level_1)
@@ -36,8 +36,8 @@ mappings:
       - condition:
           function: equal
           parameters:
-          - [str1, $(id)]
-          - [str2, $(level_1)]
+          - [str1, $(level_1)]
+          - [str2, $(id)]
         mapping: label
       p: skos:narrower
     s: specificTaxonomy:$(level_0)
@@ -49,16 +49,16 @@ mappings:
       - condition:
           function: equal
           parameters:
-          - [str1, $(id)]
-          - [str2, $(level_2)]
+          - [str1, $(level_2)]
+          - [str2, $(id)]
         mapping: label
       p: skos:broader
     - o:
       - condition:
           function: equal
           parameters:
-          - [str1, $(id)]
-          - [str2, $(level_3)]
+          - [str1, $(level_3)]
+          - [str2, $(id)]
         mapping: label
       p: skos:narrower
     s: specificTaxonomy:$(level_2)
@@ -70,8 +70,8 @@ mappings:
       - condition:
           function: equal
           parameters:
-          - [str1, $(id)]
-          - [str2, $(level_3)]
+          - [str1, $(level_3)]
+          - [str2, $(id)]
         mapping: label
       p: skos:broader
     s: specificTaxonomy:$(level_3)
@@ -80,7 +80,7 @@ mappings:
   label:
     po:
     - [a, 'skos:Concept']
-    - ['skos:inScheme', 'http://vocab.linkeddata.es/datosabiertos/kos/hacienda/presupuesto/economica-gasto~iri']
+    - ['skos:inScheme', 'specificTaxonomy:#~iri']
     - ['skos:prefLabel', $(label), es~lang]
     s: specificTaxonomy:$(id)
     sources:
@@ -88,6 +88,6 @@ mappings:
   topConcept:
     po:
     - ['skos:hasTopConcept', 'specificTaxonomy:$(level_0)~iri']
-    s: http://vocab.linkeddata.es/datosabiertos/kos/hacienda/presupuesto/economica-gasto#
+    s: specificTaxonomy:#
     sources:
     - [data.csv~csv]
