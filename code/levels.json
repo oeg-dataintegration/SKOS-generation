@@ -22,13 +22,13 @@
           ]
       }},
       {
-        "labelCapitulo": {
+        "label": {
           "sources": [
             [
-              "data.csv~csv"
+              "labels.csv~csv"
             ]
           ],
-          "s": "specificTaxonomy:$(level_0)",
+          "s": "specificTaxonomy:$(id)",
           "po": [
             [
               "a",
@@ -40,7 +40,7 @@
             ],
             [
               "skos:prefLabel",
-              "$(denominacion)",
+              "$(label)",
               "es~lang"
             ]
           ]
@@ -59,13 +59,13 @@
                 "p": "skos:narrower",
                 "o": [
                   {
-                    "mapping": "labelArticulo",
+                    "mapping": "label",
                     "condition": {
                       "function": "equal",
                       "parameters": [
                         [
                           "str1",
-                          "$(level_1)"
+                          "$(id)"
                         ],
                         [
                           "str2",
@@ -81,31 +81,6 @@
         }
         ],
         "level_1":[
-          {
-            "labelArticulo": {
-              "sources": [
-                [
-                  "data.csv~csv"
-                ]
-              ],
-              "s": "specificTaxonomy:$(level_1)",
-              "po": [
-                [
-                  "a",
-                  "skos:Concept"
-                ],
-                [
-                  "skos:inScheme",
-                  "http://vocab.linkeddata.es/datosabiertos/kos/hacienda/presupuesto/economica-gasto~iri"
-                ],
-                [
-                  "skos:prefLabel",
-                  "$(denominacion)",
-                  "es~lang"
-                ]
-              ]
-            }            
-          },
             {
                 "jerarquiaArticulo": {
                     "sources": [
@@ -119,13 +94,13 @@
                         "p": "skos:broader",
                         "o": [
                           {
-                            "mapping": "labelCapitulo",
+                            "mapping": "label",
                             "condition": {
                               "function": "equal",
                               "parameters": [
                                 [
                                   "str1",
-                                  "$(level_0)"
+                                  "$(id)"
                                 ],
                                 [
                                   "str2",
@@ -140,13 +115,13 @@
                         "p": "skos:narrower",
                         "o": [
                           {
-                            "mapping": "labelConcepto",
+                            "mapping": "label",
                             "condition": {
                               "function": "equal",
                               "parameters": [
                                 [
                                   "str1",
-                                  "$(level_2)"
+                                  "$(id)"
                                 ],
                                 [
                                   "str2",
@@ -162,31 +137,6 @@
             }
         ],
         "level_2":[
-          {
-            "labelConcepto": {
-              "sources": [
-                [
-                  "data.csv~csv"
-                ]
-              ],
-              "s": "specificTaxonomy:$(level_2)",
-              "po": [
-                [
-                  "a",
-                  "skos:Concept"
-                ],
-                [
-                  "skos:inScheme",
-                  "http://vocab.linkeddata.es/datosabiertos/kos/hacienda/presupuesto/economica-gasto~iri"
-                ],
-                [
-                  "skos:prefLabel",
-                  "$(denominacion)",
-                  "es~lang"
-                ]
-              ]
-            }            
-          },
             {
                 "jerarquiaConcepto": {
                     "sources": [
@@ -200,13 +150,13 @@
                         "p": "skos:broader",
                         "o": [
                           {
-                            "mapping": "labelArticulo",
+                            "mapping": "label",
                             "condition": {
                               "function": "equal",
                               "parameters": [
                                 [
                                   "str1",
-                                  "$(level_2)"
+                                  "$(id)"
                                 ],
                                 [
                                   "str2",
@@ -221,13 +171,13 @@
                         "p": "skos:narrower",
                         "o": [
                           {
-                            "mapping": "labelSubconcepto_1",
+                            "mapping": "label",
                             "condition": {
                               "function": "equal",
                               "parameters": [
                                 [
                                   "str1",
-                                  "$(level_3)"
+                                  "$(id)"
                                 ],
                                 [
                                   "str2",
@@ -244,31 +194,6 @@
         ],
         "level_3":[
           {
-            "labelSubconcepto_1": {
-              "sources": [
-                [
-                  "data.csv~csv"
-                ]
-              ],
-              "s": "specificTaxonomy:$(level_3)",
-              "po": [
-                [
-                  "a",
-                  "skos:Concept"
-                ],
-                [
-                  "skos:inScheme",
-                  "http://vocab.linkeddata.es/datosabiertos/kos/hacienda/presupuesto/economica-gasto~iri"
-                ],
-                [
-                  "skos:prefLabel",
-                  "$(denominacion)",
-                  "es~lang"
-                ]
-              ]
-            }            
-          },
-          {
                 "jerarquiaSuboncepto_1": {
                     "sources": [
                       [
@@ -281,13 +206,13 @@
                         "p": "skos:broader",
                         "o": [
                           {
-                            "mapping": "labelConcepto",
+                            "mapping": "label",
                             "condition": {
                               "function": "equal",
                               "parameters": [
                                 [
                                   "str1",
-                                  "$(level_3)"
+                                  "$(id)"
                                 ],
                                 [
                                   "str2",
@@ -302,13 +227,13 @@
                         "p": "skos:broader",
                         "o": [
                           {
-                            "mapping": "labelSubconcepto_2",
+                            "mapping": "label",
                             "condition": {
                               "function": "equal",
                               "parameters": [
                                 [
                                   "str1",
-                                  "$(level_4)"
+                                  "$(id)"
                                 ],
                                 [
                                   "str2",
@@ -324,31 +249,6 @@
             }
         ],
         "level_x":[
-          {
-            "labelSubconcepto_CURRENTSBC": {
-              "sources": [
-                [
-                  "data.csv~csv"
-                ]
-              ],
-              "s": "specificTaxonomy:$(level_CURRENTLVL)",
-              "po": [
-                [
-                  "a",
-                  "skos:Concept"
-                ],
-                [
-                  "skos:inScheme",
-                  "http://vocab.linkeddata.es/datosabiertos/kos/hacienda/presupuesto/economica-gasto~iri"
-                ],
-                [
-                  "skos:prefLabel",
-                  "$(denominacion)",
-                  "es~lang"
-                ]
-              ]
-            }            
-          },
             {
                 "jerarquiaSuboncepto_CURRENTSBC": {
                     "sources": [
@@ -362,13 +262,13 @@
                         "p": "skos:broader",
                         "o": [
                           {
-                            "mapping": "labelSubconcepto_PREVSBC",
+                            "mapping": "label",
                             "condition": {
                               "function": "equal",
                               "parameters": [
                                 [
                                   "str1",
-                                  "$(level_PREVLVL)"
+                                  "$(id)"
                                 ],
                                 [
                                   "str2",
@@ -383,13 +283,13 @@
                         "p": "skos:narrower",
                         "o": [
                           {
-                            "mapping": "labelSubconcepto_NXTSBC",
+                            "mapping": "label",
                             "condition": {
                               "function": "equal",
                               "parameters": [
                                 [
                                   "str1",
-                                  "$(level_NXTLVL)"
+                                  "$(id)"
                                 ],
                                 [
                                   "str2",

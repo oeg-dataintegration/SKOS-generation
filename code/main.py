@@ -13,12 +13,12 @@ def main():
     #readYarrrml('../mappings/mapping.yaml')
     csvP = CsvProcessor('../csv/clasificacion-economica-gasto-labels.csv')
     csvP.normalizeCsv()
-    # uri = 'http://example.com/'
-    # mg1 = MappingGenerator(2,uri + 'taxonomy1')
+    uri = 'http://example.com/'
+    mg1 = MappingGenerator(csvP.ncols - 1,uri + 'exampleTaxonomy/')
     # mg2 = MappingGenerator(4, uri + 'taxonomy2')
     # mg3 = MappingGenerator(10, uri + 'taxonomy3')
-    # print('**********************MAPPING 2 COLS**********************')
-    # mg1.generateMapping(fileName='2cols.yaml')
+    print('**********************MAPPING %s COLS**********************'%(str(csvP.ncols - 1)))
+    mg1.generateMapping(fileName='mapping.yaml')
     # print('**********************MAPPING 4 COLS**********************')
     # mg2.generateMapping(fileName='4cols.yaml')
     # print('**********************MAPPING 10 COLS**********************')

@@ -57,9 +57,6 @@ class MappingGenerator:
 
     def __generateYamlMapping(self):
         dumpedMapping = str(yaml.dump(self.jsonMapping, default_flow_style=None))
-        #dumpedMapping = dumpedMapping.replace("'\"", '"')
-        #dumpedMapping = dumpedMapping.replace("\"'",'"')
-        #dumpedMapping = dumpedMapping.replace('\'', '')
         self.yamlMapping = dumpedMapping
 
     def generateMapping(self, fileName='mapping.yaml'):
