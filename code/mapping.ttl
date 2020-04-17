@@ -160,7 +160,7 @@
 :om_3 a rr:ObjectMap;
     rr:parentTriplesMap :map_label_0;
     rr:joinCondition :jc_3.
-:jc_3 rr:child "level_2";
+:jc_3 rr:child "level_1";
     rr:parent "id".
 :om_4 a rr:ObjectMap;
     rr:parentTriplesMap :map_label_0;
@@ -170,5 +170,5 @@
 :om_5 a rr:ObjectMap;
     rr:parentTriplesMap :map_label_0;
     rr:joinCondition :jc_5.
-:jc_5 rr:child "level_3";
+:jc_5 rr:child "level_2";
     rr:parent "id".
