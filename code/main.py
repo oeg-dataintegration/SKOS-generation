@@ -11,10 +11,10 @@ def readYarrrml(mappingPath):
 
 def main():
     #readYarrrml('../mappings/mapping.yaml')
-    csvP = CsvProcessor('../csv/test_extended.csv')
+    csvP = CsvProcessor('../csv/clasificacion-economica-gasto-labels-extended.csv')
     csvP.normalizeCsv()
     uri = 'http://example.com/'
-    mg1 = MappingGenerator(csvP.ncols - 1,uri + 'exampleTaxonomy/')
+    mg1 = MappingGenerator(csvP.ncols - 4,uri + 'exampleTaxonomy/')
     # mg2 = MappingGenerator(4, uri + 'taxonomy2')
     # mg3 = MappingGenerator(10, uri + 'taxonomy3')
     print('**********************MAPPING %s COLS**********************'%(str(csvP.ncols - 1)))

@@ -60,7 +60,7 @@
 :om_3 a rr:ObjectMap;
     rml:reference "title";
     rr:termType rr:Literal;
-    rr:language "$LANG".
+    rr:language "es".
 :pom_4 a rr:PredicateObjectMap.
 :map_conceptScheme_0 rr:predicateObjectMap :pom_4.
 :pm_4 a rr:PredicateMap.
@@ -70,7 +70,7 @@
 :om_4 a rr:ObjectMap;
     rml:reference "name";
     rr:termType rr:Literal;
-    rr:language "$LANG".
+    rr:language "es".
 :map_jerarquiaArticulo_0 rml:logicalSource :source_1.
 :source_1 a rml:LogicalSource;
     rml:source "data.csv";
@@ -122,152 +122,89 @@
 :pom_8 rr:predicateMap :pm_8.
 :pm_8 rr:constant skos:broader.
 :pom_8 rr:objectMap :om_8.
-:pom_9 a rr:PredicateObjectMap.
-:map_jerarquiaConcepto_0 rr:predicateObjectMap :pom_9.
-:pm_9 a rr:PredicateMap.
-:pom_9 rr:predicateMap :pm_9.
-:pm_9 rr:constant skos:narrower.
-:pom_9 rr:objectMap :om_9.
-:map_jerarquiaSuboncepto_1_0 rml:logicalSource :source_4.
+:map_label_0 rml:logicalSource :source_4.
 :source_4 a rml:LogicalSource;
-    rml:source "data.csv";
-    rml:referenceFormulation ql:CSV.
-:map_jerarquiaSuboncepto_1_0 a rr:TriplesMap;
-    rdfs:label "jerarquiaSuboncepto_1".
-:s_4 a rr:SubjectMap.
-:map_jerarquiaSuboncepto_1_0 rr:subjectMap :s_4.
-:s_4 rr:template "http://example.com/exampleTaxonomy/{level_3}".
-:pom_10 a rr:PredicateObjectMap.
-:map_jerarquiaSuboncepto_1_0 rr:predicateObjectMap :pom_10.
-:pm_10 a rr:PredicateMap.
-:pom_10 rr:predicateMap :pm_10.
-:pm_10 rr:constant skos:broader.
-:pom_10 rr:objectMap :om_10.
-:pom_11 a rr:PredicateObjectMap.
-:map_jerarquiaSuboncepto_1_0 rr:predicateObjectMap :pom_11.
-:pm_11 a rr:PredicateMap.
-:pom_11 rr:predicateMap :pm_11.
-:pm_11 rr:constant skos:broader.
-:pom_11 rr:objectMap :om_11.
-:map_jerarquiaSuboncepto_2_0 rml:logicalSource :source_5.
-:source_5 a rml:LogicalSource;
-    rml:source "data.csv";
-    rml:referenceFormulation ql:CSV.
-:map_jerarquiaSuboncepto_2_0 a rr:TriplesMap;
-    rdfs:label "jerarquiaSuboncepto_2".
-:s_5 a rr:SubjectMap.
-:map_jerarquiaSuboncepto_2_0 rr:subjectMap :s_5.
-:s_5 rr:template "http://example.com/exampleTaxonomy/{level_5}".
-:pom_12 a rr:PredicateObjectMap.
-:map_jerarquiaSuboncepto_2_0 rr:predicateObjectMap :pom_12.
-:pm_12 a rr:PredicateMap.
-:pom_12 rr:predicateMap :pm_12.
-:pm_12 rr:constant skos:broader.
-:pom_12 rr:objectMap :om_12.
-:pom_13 a rr:PredicateObjectMap.
-:map_jerarquiaSuboncepto_2_0 rr:predicateObjectMap :pom_13.
-:pm_13 a rr:PredicateMap.
-:pom_13 rr:predicateMap :pm_13.
-:pm_13 rr:constant skos:narrower.
-:pom_13 rr:objectMap :om_13.
-:map_jerarquiaSuboncepto_3_0 rml:logicalSource :source_6.
-:source_6 a rml:LogicalSource;
-    rml:source "data.csv";
-    rml:referenceFormulation ql:CSV.
-:map_jerarquiaSuboncepto_3_0 a rr:TriplesMap;
-    rdfs:label "jerarquiaSuboncepto_3".
-:s_6 a rr:SubjectMap.
-:map_jerarquiaSuboncepto_3_0 rr:subjectMap :s_6.
-:s_6 rr:template "http://example.com/exampleTaxonomy/{level_6}".
-:pom_14 a rr:PredicateObjectMap.
-:map_jerarquiaSuboncepto_3_0 rr:predicateObjectMap :pom_14.
-:pm_14 a rr:PredicateMap.
-:pom_14 rr:predicateMap :pm_14.
-:pm_14 rr:constant skos:broader.
-:pom_14 rr:objectMap :om_14.
-:map_label_0 rml:logicalSource :source_7.
-:source_7 a rml:LogicalSource;
     rml:source "labels.csv";
     rml:referenceFormulation ql:CSV.
 :map_label_0 a rr:TriplesMap;
     rdfs:label "label".
-:s_7 a rr:SubjectMap.
-:map_label_0 rr:subjectMap :s_7.
-:s_7 rr:template "http://example.com/exampleTaxonomy/{id}".
-:pom_15 a rr:PredicateObjectMap.
-:map_label_0 rr:predicateObjectMap :pom_15.
-:pm_15 a rr:PredicateMap.
-:pom_15 rr:predicateMap :pm_15.
-:pm_15 rr:constant rdf:type.
-:pom_15 rr:objectMap :om_15.
-:om_15 a rr:ObjectMap;
+:s_4 a rr:SubjectMap.
+:map_label_0 rr:subjectMap :s_4.
+:s_4 rr:template "http://example.com/exampleTaxonomy/{id}".
+:pom_9 a rr:PredicateObjectMap.
+:map_label_0 rr:predicateObjectMap :pom_9.
+:pm_9 a rr:PredicateMap.
+:pom_9 rr:predicateMap :pm_9.
+:pm_9 rr:constant rdf:type.
+:pom_9 rr:objectMap :om_9.
+:om_9 a rr:ObjectMap;
     rr:constant "http://www.w3.org/2004/02/skos/core#Concept";
     rr:termType rr:IRI.
-:pom_16 a rr:PredicateObjectMap.
-:map_label_0 rr:predicateObjectMap :pom_16.
-:pm_16 a rr:PredicateMap.
-:pom_16 rr:predicateMap :pm_16.
-:pm_16 rr:constant skos:inScheme.
-:pom_16 rr:objectMap :om_16.
-:om_16 a rr:ObjectMap;
+:pom_10 a rr:PredicateObjectMap.
+:map_label_0 rr:predicateObjectMap :pom_10.
+:pm_10 a rr:PredicateMap.
+:pom_10 rr:predicateMap :pm_10.
+:pm_10 rr:constant skos:inScheme.
+:pom_10 rr:objectMap :om_10.
+:om_10 a rr:ObjectMap;
     rr:constant "http://example.com/exampleTaxonomy/";
     rr:termType rr:IRI.
-:pom_17 a rr:PredicateObjectMap.
-:map_label_0 rr:predicateObjectMap :pom_17.
-:pm_17 a rr:PredicateMap.
-:pom_17 rr:predicateMap :pm_17.
-:pm_17 rr:constant skos:prefLabel.
-:pom_17 rr:objectMap :om_17.
-:om_17 a rr:ObjectMap;
+:pom_11 a rr:PredicateObjectMap.
+:map_label_0 rr:predicateObjectMap :pom_11.
+:pm_11 a rr:PredicateMap.
+:pom_11 rr:predicateMap :pm_11.
+:pm_11 rr:constant skos:prefLabel.
+:pom_11 rr:objectMap :om_11.
+:om_11 a rr:ObjectMap;
     rml:reference "denomEs";
     rr:termType rr:Literal;
     rr:language "es".
-:pom_18 a rr:PredicateObjectMap.
-:map_label_0 rr:predicateObjectMap :pom_18.
-:pm_18 a rr:PredicateMap.
-:pom_18 rr:predicateMap :pm_18.
-:pm_18 rr:constant skos:prefLabel.
-:pom_18 rr:objectMap :om_18.
-:om_18 a rr:ObjectMap;
+:pom_12 a rr:PredicateObjectMap.
+:map_label_0 rr:predicateObjectMap :pom_12.
+:pm_12 a rr:PredicateMap.
+:pom_12 rr:predicateMap :pm_12.
+:pm_12 rr:constant skos:prefLabel.
+:pom_12 rr:objectMap :om_12.
+:om_12 a rr:ObjectMap;
     rml:reference "denomEn";
     rr:termType rr:Literal;
     rr:language "en".
-:pom_19 a rr:PredicateObjectMap.
-:map_label_0 rr:predicateObjectMap :pom_19.
-:pm_19 a rr:PredicateMap.
-:pom_19 rr:predicateMap :pm_19.
-:pm_19 rr:constant skos:definitionLabel.
-:pom_19 rr:objectMap :om_19.
-:om_19 a rr:ObjectMap;
+:pom_13 a rr:PredicateObjectMap.
+:map_label_0 rr:predicateObjectMap :pom_13.
+:pm_13 a rr:PredicateMap.
+:pom_13 rr:predicateMap :pm_13.
+:pm_13 rr:constant skos:definitionLabel.
+:pom_13 rr:objectMap :om_13.
+:om_13 a rr:ObjectMap;
     rml:reference "defEs";
     rr:termType rr:Literal;
     rr:language "es".
-:pom_20 a rr:PredicateObjectMap.
-:map_label_0 rr:predicateObjectMap :pom_20.
-:pm_20 a rr:PredicateMap.
-:pom_20 rr:predicateMap :pm_20.
-:pm_20 rr:constant skos:definitionLabel.
-:pom_20 rr:objectMap :om_20.
-:om_20 a rr:ObjectMap;
+:pom_14 a rr:PredicateObjectMap.
+:map_label_0 rr:predicateObjectMap :pom_14.
+:pm_14 a rr:PredicateMap.
+:pom_14 rr:predicateMap :pm_14.
+:pm_14 rr:constant skos:definitionLabel.
+:pom_14 rr:objectMap :om_14.
+:om_14 a rr:ObjectMap;
     rml:reference "defEn";
     rr:termType rr:Literal;
     rr:language "en".
-:map_topConcept_0 rml:logicalSource :source_8.
-:source_8 a rml:LogicalSource;
+:map_topConcept_0 rml:logicalSource :source_5.
+:source_5 a rml:LogicalSource;
     rml:source "data.csv";
     rml:referenceFormulation ql:CSV.
 :map_topConcept_0 a rr:TriplesMap;
     rdfs:label "topConcept".
-:s_8 a rr:SubjectMap.
-:map_topConcept_0 rr:subjectMap :s_8.
-:s_8 rr:constant "http://example.com/exampleTaxonomy/".
-:pom_21 a rr:PredicateObjectMap.
-:map_topConcept_0 rr:predicateObjectMap :pom_21.
-:pm_21 a rr:PredicateMap.
-:pom_21 rr:predicateMap :pm_21.
-:pm_21 rr:constant skos:hasTopConcept.
-:pom_21 rr:objectMap :om_21.
-:om_21 a rr:ObjectMap;
+:s_5 a rr:SubjectMap.
+:map_topConcept_0 rr:subjectMap :s_5.
+:s_5 rr:constant "http://example.com/exampleTaxonomy/".
+:pom_15 a rr:PredicateObjectMap.
+:map_topConcept_0 rr:predicateObjectMap :pom_15.
+:pm_15 a rr:PredicateMap.
+:pom_15 rr:predicateMap :pm_15.
+:pm_15 rr:constant skos:hasTopConcept.
+:pom_15 rr:objectMap :om_15.
+:om_15 a rr:ObjectMap;
     rr:template "http://example.com/exampleTaxonomy/{level_0}";
     rr:termType rr:IRI.
 :om_5 a rr:ObjectMap;
@@ -289,34 +226,4 @@
     rr:parentTriplesMap :map_label_0;
     rr:joinCondition :jc_3.
 :jc_3 rr:child "level_1";
-    rr:parent "id".
-:om_9 a rr:ObjectMap;
-    rr:parentTriplesMap :map_label_0;
-    rr:joinCondition :jc_4.
-:jc_4 rr:child "level_3";
-    rr:parent "id".
-:om_10 a rr:ObjectMap;
-    rr:parentTriplesMap :map_label_0;
-    rr:joinCondition :jc_5.
-:jc_5 rr:child "level_2";
-    rr:parent "id".
-:om_11 a rr:ObjectMap;
-    rr:parentTriplesMap :map_label_0;
-    rr:joinCondition :jc_6.
-:jc_6 rr:child "level_4";
-    rr:parent "id".
-:om_12 a rr:ObjectMap;
-    rr:parentTriplesMap :map_label_0;
-    rr:joinCondition :jc_7.
-:jc_7 rr:child "level_4";
-    rr:parent "id".
-:om_13 a rr:ObjectMap;
-    rr:parentTriplesMap :map_label_0;
-    rr:joinCondition :jc_8.
-:jc_8 rr:child "level_6";
-    rr:parent "id".
-:om_14 a rr:ObjectMap;
-    rr:parentTriplesMap :map_label_0;
-    rr:joinCondition :jc_9.
-:jc_9 rr:child "level_5";
     rr:parent "id".

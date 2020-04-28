@@ -30,12 +30,12 @@
         [
           "dc:title",
           "$(title)",
-          "$LANG~lang"
+          "es~lang"
         ],
         [
           "skos:prefLabel",
           "$(name)",
-          "$LANG~lang"
+          "es~lang"
         ]
         ]
     }}    

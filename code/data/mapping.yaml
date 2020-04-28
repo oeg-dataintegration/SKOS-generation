@@ -14,8 +14,8 @@ mappings:
     - [a, 'skos:conceptScheme']
     - ['dc:creator', $(creator)]
     - ['dc:date', $(date)]
-    - ['dc:title', $(title), $LANG~lang]
-    - ['skos:prefLabel', $(name), $LANG~lang]
+    - ['dc:title', $(title), es~lang]
+    - ['skos:prefLabel', $(name), es~lang]
     s: 'specificTaxonomy:'
     sources:
     - [description.csv~csv]
@@ -63,70 +63,7 @@ mappings:
           - [str2, $(id)]
         mapping: label
       p: skos:broader
-    - o:
-      - condition:
-          function: equal
-          parameters:
-          - [str1, $(level_3)]
-          - [str2, $(id)]
-        mapping: label
-      p: skos:narrower
     s: specificTaxonomy:$(level_2)
-    sources:
-    - [data.csv~csv]
-  jerarquiaSuboncepto_1:
-    po:
-    - o:
-      - condition:
-          function: equal
-          parameters:
-          - [str1, $(level_2)]
-          - [str2, $(id)]
-        mapping: label
-      p: skos:broader
-    - o:
-      - condition:
-          function: equal
-          parameters:
-          - [str1, $(level_4)]
-          - [str2, $(id)]
-        mapping: label
-      p: skos:broader
-    s: specificTaxonomy:$(level_3)
-    sources:
-    - [data.csv~csv]
-  jerarquiaSuboncepto_2:
-    po:
-    - o:
-      - condition:
-          function: equal
-          parameters:
-          - [str1, $(level_4)]
-          - [str2, $(id)]
-        mapping: label
-      p: skos:broader
-    - o:
-      - condition:
-          function: equal
-          parameters:
-          - [str1, $(level_6)]
-          - [str2, $(id)]
-        mapping: label
-      p: skos:narrower
-    s: specificTaxonomy:$(level_5)
-    sources:
-    - [data.csv~csv]
-  jerarquiaSuboncepto_3:
-    po:
-    - o:
-      - condition:
-          function: equal
-          parameters:
-          - [str1, $(level_5)]
-          - [str2, $(id)]
-        mapping: label
-      p: skos:broader
-    s: specificTaxonomy:$(level_6)
     sources:
     - [data.csv~csv]
   label:

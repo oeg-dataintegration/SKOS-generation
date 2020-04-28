@@ -21,14 +21,14 @@ class CsvProcessor:
 
     def __initializeOutputFiles(self):
         f = open(self.outputFile, 'w')
-        line = ''.join('level_%s'%(str(i))+ ',' for i in range(self.ncols - nLabelColumns - 1)) 
+        line = ''.join('level_%s'%(str(i))+ ',' for i in range(self.ncols - nLabelColumns)) 
         line = line[:-1] + '\n'
         f.write(line)
         f.close()
         f = open(self.labelsFile, 'w')
         f.write('id,%s\n'%(labelColumnsNames))
         f.close()
-        self.values = ['' for i in range(self.ncols - nLabelColumns - 1)]
+        self.values = ['' for i in range(self.ncols - nLabelColumns)]
 
     def __shouldWrite(self):
         return (' ' not in self.values and '' not in self.values)
@@ -40,7 +40,7 @@ class CsvProcessor:
         f.close()
     def __writeLabel(self, row, i):
         f = open(self.labelsFile, 'a')
-        labels = ''.join('"' + label + '",' for label in row[-nLabelColumns - 1:])
+        labels = ''.join('"' + label + '",' for label in row[-nLabelColumns:])
         labels = labels[:-1]
         if("mantenimiento y conservación." in row):
             print(labels)
@@ -50,10 +50,10 @@ class CsvProcessor:
         f.write('"' + row[i] + '"' + ',' + labels + '\n')
         f.close()
     def __updateValues(self, row, i):
-        if i < self.ncols - nLabelColumns - 1 and row[i] != "" and row[i] != " " and row[i] != self.values[i]:
+        if i < self.ncols - nLabelColumns and row[i] != "" and row[i] != " " and row[i] != self.values[i]:
             self.values[i] = row[i]
             self.__writeLabel(row, i)
-            if(i < self.ncols - nLabelColumns - 2):
+            if(i < self.ncols - nLabelColumns - 1):
                 self.values[i + 1] = ''
 
     def normalizeCsv(self):
