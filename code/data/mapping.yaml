@@ -9,6 +9,16 @@ prefixes:
   specificTaxonomy: http://example.com/exampleTaxonomy/
   xsd: http://www.w3.org/2001/XMLSchema#
 mappings:
+  conceptScheme:
+    po:
+    - [a, 'skos:conceptScheme']
+    - ['dc:creator', $(creator)]
+    - ['dc:date', $(date)]
+    - ['dc:title', $(title), $LANG~lang]
+    - ['skos:prefLabel', $(name), $LANG~lang]
+    s: 'specificTaxonomy:'
+    sources:
+    - [description.csv~csv]
   jerarquiaArticulo:
     po:
     - o:
@@ -74,14 +84,59 @@ mappings:
           - [str2, $(id)]
         mapping: label
       p: skos:broader
+    - o:
+      - condition:
+          function: equal
+          parameters:
+          - [str1, $(level_4)]
+          - [str2, $(id)]
+        mapping: label
+      p: skos:broader
     s: specificTaxonomy:$(level_3)
+    sources:
+    - [data.csv~csv]
+  jerarquiaSuboncepto_2:
+    po:
+    - o:
+      - condition:
+          function: equal
+          parameters:
+          - [str1, $(level_4)]
+          - [str2, $(id)]
+        mapping: label
+      p: skos:broader
+    - o:
+      - condition:
+          function: equal
+          parameters:
+          - [str1, $(level_6)]
+          - [str2, $(id)]
+        mapping: label
+      p: skos:narrower
+    s: specificTaxonomy:$(level_5)
+    sources:
+    - [data.csv~csv]
+  jerarquiaSuboncepto_3:
+    po:
+    - o:
+      - condition:
+          function: equal
+          parameters:
+          - [str1, $(level_5)]
+          - [str2, $(id)]
+        mapping: label
+      p: skos:broader
+    s: specificTaxonomy:$(level_6)
     sources:
     - [data.csv~csv]
   label:
     po:
     - [a, 'skos:Concept']
     - ['skos:inScheme', 'specificTaxonomy:~iri']
-    - ['skos:prefLabel', $(label), es~lang]
+    - ['skos:prefLabel', $(denomEs), es~lang]
+    - ['skos:prefLabel', $(denomEn), en~lang]
+    - ['skos:definitionLabel', $(defEs), es~lang]
+    - ['skos:definitionLabel', $(defEn), en~lang]
     s: specificTaxonomy:$(id)
     sources:
     - [labels.csv~csv]

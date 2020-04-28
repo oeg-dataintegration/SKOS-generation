@@ -10,6 +10,36 @@
   "owl": "http://www.w3.org/2002/07/owl#"
 },
 "levels":{
+  "description":[
+    {"conceptScheme": {
+      "sources": [["description.csv~csv"]],
+      "s": "specificTaxonomy:",
+      "po": [
+        [
+          "a",
+          "skos:conceptScheme"
+        ],
+        [
+          "dc:creator",
+          "$(creator)"
+        ],
+        [
+          "dc:date",
+          "$(date)"
+        ],
+        [
+          "dc:title",
+          "$(title)",
+          "$LANG~lang"
+        ],
+        [
+          "skos:prefLabel",
+          "$(name)",
+          "$LANG~lang"
+        ]
+        ]
+    }}    
+  ],
     "level_0":[
       {"topConcept": {
         "sources": [["data.csv~csv"]],
@@ -40,8 +70,23 @@
             ],
             [
               "skos:prefLabel",
-              "$(label)",
+              "$(denomEs)",
               "es~lang"
+            ],
+            [
+              "skos:prefLabel",
+              "$(denomEn)",
+              "en~lang"
+            ],
+            [
+              "skos:definitionLabel",
+              "$(defEs)",
+              "es~lang"
+            ],
+            [
+              "skos:definitionLabel",
+              "$(defEn)",
+              "en~lang"
             ]
           ]
         }

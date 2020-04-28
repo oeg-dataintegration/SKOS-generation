@@ -14,7 +14,7 @@ class MappingGenerator:
         self.jsonMapping["prefixes"].update({"specificTaxonomy":self.specificTaxonomy})
         j = 2
         for i in  range(self.nCols):
-            if(i < 4):
+            if(i < 5):
                 if(i == self.nCols - 1):
 
                     for k,tm in enumerate(MappingGenerator.mappingStructure["levels"][keys[i]]):
@@ -38,7 +38,7 @@ class MappingGenerator:
                 prevSubConcept = j - 1
                 nextLevel = i + 1
                 nextSubConcept = j + 1
-                tms = MappingGenerator.mappingStructure["levels"][keys[4]]
+                tms = MappingGenerator.mappingStructure["levels"][keys[5]]
                 if(i == self.nCols -1):
                     key = list(tms[-1].keys())[0]
                     tms[-1][key]["po"] = tms[-1][key]["po"][:-1]
@@ -59,12 +59,6 @@ class MappingGenerator:
         dumpedMapping = str(yaml.dump(self.jsonMapping, default_flow_style=None))
         self.yamlMapping = dumpedMapping
 
-    def generateMapping(self, fileName='mapping.yaml'):
-        self.__generateJsonMapping()
-        self.__sanitizeYaml()
-        f = open(fileName, '+w')
-        f.write(self.yamlMapping)
-
     def __sanitizeYaml(self):
         for tm in self.jsonMapping["mappings"]:
             for i,po in enumerate(self.jsonMapping["mappings"][tm]["po"]):
@@ -73,3 +67,9 @@ class MappingGenerator:
                         self.jsonMapping["mappings"][tm]["po"][i][1] = '"' + po[1] + '"'
         self.yamlMapping = str(yaml.dump({"prefixes":self.jsonMapping["prefixes"]}, default_flow_style=False))
         self.yamlMapping +=  str(yaml.dump({"mappings":self.jsonMapping["mappings"]}, default_flow_style=None)).replace('"', '')
+
+    def generateMapping(self, fileName='mapping.yaml'):
+        self.__generateJsonMapping()
+        self.__sanitizeYaml()
+        f = open('./data/' + fileName, '+w')
+        f.write(self.yamlMapping)

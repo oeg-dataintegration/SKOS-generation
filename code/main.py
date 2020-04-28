@@ -7,11 +7,11 @@ def readYarrrml(mappingPath):
     with open('mapping.json', 'w') as f:
         f.write(json.dumps(data,indent=2))
 
-
+#awk -F ',' '{$1="\""$1;$NF=$NF"\"";print $0 } OFS="\",\""' clasificacion-economica-gasto-labels-extended.csv > test_extended.csv
 
 def main():
     #readYarrrml('../mappings/mapping.yaml')
-    csvP = CsvProcessor('../csv/clasificacion-economica-gasto-labels.csv')
+    csvP = CsvProcessor('../csv/test_extended.csv')
     csvP.normalizeCsv()
     uri = 'http://example.com/'
     mg1 = MappingGenerator(csvP.ncols - 1,uri + 'exampleTaxonomy/')
