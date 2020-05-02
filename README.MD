@@ -9,7 +9,7 @@ Un fichero ejemplo es ejemplo-clasificacion.csv que corresponde a la clasificaci
 * Fichero para la descripción de la clasificación. Este fichero contiene los metadatos de la taxonomía, tales como el creador, la fecha de creación, el título de la taxonomía y su label (nombre). En el fichero ejemplo-descripcion se pueden ver los metadatos de la clasificacion económica de gasto.
 
 ## ¿Cuál es la salida del proceso de generación?
-El SKOS generado contiene skos:topConcept para todos los términos del nivel 1. Para cada término se genera skos:prefLabel para español e inglés y skos:definition para español e inglés. Luego, de un nivel a uno más específico se generan tripletas con skos:narrower y de uno específico a uno más general se genera un skos:broader.
+El SKOS generado contiene skos:topConcept para todos los términos del nivel 1. Para cada término se genera skos:prefLabel para español e inglés y skos:definition para español e inglés. Luego, de un nivel a uno más específico se generan tripletas con skos:narrower y de uno específico a uno más general se genera un skos:broader. Además se genera la información de los metadatos de la taxonomías utilizando dc:creator, dc:date, dc:title y dc:author.
 
 ## ¿Cómo se ejecuta el proceso?
 
