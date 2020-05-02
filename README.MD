@@ -16,11 +16,11 @@ El SKOS generado contiene skos:topConcept para todos los términos del nivel 1. 
 ## ¿En qué consiste el proceso de generación?
 * A partir del fichero csv de datos de la clasificación se generan dos ficheros csv: (1) fichero para los labels y definiciones y (2) fichero para la jerarquía entre términos.
 
-* A partir de los dos ficheros csv del paso anterior y del fichero de descripción se genera un fichero de mappings [YARRRML](https://rml.io/yarrrml/) (mappings representados en YAML). Para este paso también se tiene como entrada un template de fichero yarrrml ya que un RDF en SKOS para los casos que estamos considerando sigue siempre la misma estructura. 
+* A partir de los dos ficheros csv del paso anterior y del fichero de descripción se genera un fichero de mappings [YARRRML](https://rml.io/yarrrml/) (mappings representados en YAML). Para este paso también se tiene como entrada un template de fichero yarrrml ya que un RDF en SKOS para los casos que se están considerando sigue siempre la misma estructura. 
 
-* Se ejecuta la traducción del fichero [YARRRML a un fichero de mappins RML.
+* Se ejecuta la traducción del fichero YARRRML a un fichero de mappins RML.
 
-* Se genera el fichero RDF al ejecutar la herramienta RDFizer que a partir de los ficheros csv y el fichero de mappings RML, materializa a un fichero RDF serializado en Turtle.
+* Se genera el fichero RDF al ejecutar la herramienta [RDFizer](https://github.com/SDM-TIB/SDM-RDFizer) que a partir de los ficheros csv y el fichero de mappings RML, materializa a un fichero RDF serializado en Turtle.
 
 
 
