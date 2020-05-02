@@ -14,7 +14,7 @@ El SKOS generado contiene skos:topConcept para todos los términos del nivel 1. 
 ## ¿Cómo se ejecuta el proceso?
 
 ## ¿En qué consiste el proceso de generación?
-* Se en primer lugar el fichero csv de datos de la clasificación y genera dos ficheros csv: (1) fichero para los labels y definiciones y (2) fichero para la jerarquía entee términos.
+* A partir del fichero csv de datos de la clasificación y genera dos ficheros csv: (1) fichero para los labels y definiciones y (2) fichero para la jerarquía entee términos.
 
 * A partir de los dos ficheros csv del paso anterior y del fichero de descripción se genera un fichero de mappings [YARRRML](https://rml.io/yarrrml/) (mappings representados en YAML). Para este paso también se tiene como entrada un template de fichero yarrrml ya que un RDF en SKOS para los casos que estamos considerando sigue siempre la misma estructura. 
 
