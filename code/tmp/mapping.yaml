@@ -6,7 +6,7 @@ prefixes:
   rdf: http://www.w3.org/1999/02/22-rdf-syntax-ns#
   rdfs: http://www.w3.org/2000/01/rdf-schema#
   skos: http://www.w3.org/2004/02/skos/core#
-  specificTaxonomy: http://example.com/exampleTaxonomy/
+  specificTaxonomy: http://example.com/skosuri/
   xsd: http://www.w3.org/2001/XMLSchema#
 mappings:
   conceptScheme:
@@ -18,7 +18,7 @@ mappings:
     - ['skos:prefLabel', $(name), es~lang]
     s: 'specificTaxonomy:'
     sources:
-    - [description.csv~csv]
+    - [/data/csv/description.csv~csv]
   jerarquiaArticulo:
     po:
     - o:
@@ -39,7 +39,7 @@ mappings:
       p: skos:narrower
     s: specificTaxonomy:$(level_1)
     sources:
-    - [data.csv~csv]
+    - [/data/csv/data.csv~csv]
   jerarquiaCapitulo:
     po:
     - o:
@@ -52,7 +52,7 @@ mappings:
       p: skos:narrower
     s: specificTaxonomy:$(level_0)
     sources:
-    - [data.csv~csv]
+    - [/data/csv/data.csv~csv]
   jerarquiaConcepto:
     po:
     - o:
@@ -63,9 +63,30 @@ mappings:
           - [str2, $(id)]
         mapping: label
       p: skos:broader
+    - o:
+      - condition:
+          function: equal
+          parameters:
+          - [str1, $(level_3)]
+          - [str2, $(id)]
+        mapping: label
+      p: skos:narrower
     s: specificTaxonomy:$(level_2)
     sources:
-    - [data.csv~csv]
+    - [/data/csv/data.csv~csv]
+  jerarquiaSuboncepto_1:
+    po:
+    - o:
+      - condition:
+          function: equal
+          parameters:
+          - [str1, $(level_2)]
+          - [str2, $(id)]
+        mapping: label
+      p: skos:broader
+    s: specificTaxonomy:$(level_3)
+    sources:
+    - [/data/csv/data.csv~csv]
   label:
     po:
     - [a, 'skos:Concept']
@@ -76,10 +97,10 @@ mappings:
     - ['skos:definitionLabel', $(defEn), en~lang]
     s: specificTaxonomy:$(id)
     sources:
-    - [labels.csv~csv]
+    - [/data/csv/labels.csv~csv]
   topConcept:
     po:
     - ['skos:hasTopConcept', 'specificTaxonomy:$(level_0)~iri']
     s: 'specificTaxonomy:'
     sources:
-    - [data.csv~csv]
+    - [/data/csv/data.csv~csv]

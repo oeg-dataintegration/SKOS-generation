@@ -1,6 +1,6 @@
 import yaml
 import json
-
+import BashUtils as bash 
 class MappingGenerator:
     mappingStructure=json.loads(open('./levels.json').read())
     def __init__(self, nCols_, specificTaxonomy_):
@@ -8,6 +8,7 @@ class MappingGenerator:
         self.specificTaxonomy = specificTaxonomy_
         self.jsonMapping = {"mappings":{}, "prefixes":{}}
         self.yamlMapping = ''
+        self.generateMapping()
     def __generateJsonMapping(self):
         keys = list(MappingGenerator.mappingStructure["levels"].keys())
         self.jsonMapping["prefixes"] = MappingGenerator.mappingStructure["prefixes"]
@@ -71,5 +72,9 @@ class MappingGenerator:
     def generateMapping(self, fileName='mapping.yaml'):
         self.__generateJsonMapping()
         self.__sanitizeYaml()
-        f = open('./data/' + fileName, '+w')
+        f = open('./tmp/' + fileName, '+w', encoding='utf-8')
         f.write(self.yamlMapping)
+        f.close()
+        self.__translateToRml()
+    def __translateToRml(self):
+        bash.translateMapping()

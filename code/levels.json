@@ -12,7 +12,7 @@
 "levels":{
   "description":[
     {"conceptScheme": {
-      "sources": [["description.csv~csv"]],
+      "sources": [["/data/csv/description.csv~csv"]],
       "s": "specificTaxonomy:",
       "po": [
         [
@@ -42,7 +42,7 @@
   ],
     "level_0":[
       {"topConcept": {
-        "sources": [["data.csv~csv"]],
+        "sources": [["/data/csv/data.csv~csv"]],
         "s": "specificTaxonomy:",
         "po": [
           [
@@ -55,7 +55,7 @@
         "label": {
           "sources": [
             [
-              "labels.csv~csv"
+              "/data/csv/labels.csv~csv"
             ]
           ],
           "s": "specificTaxonomy:$(id)",
@@ -95,7 +95,7 @@
         "jerarquiaCapitulo": {
             "sources": [
               [
-                "data.csv~csv"
+                "/data/csv/data.csv~csv"
               ]
             ],
             "s": "specificTaxonomy:$(level_0)",
@@ -130,7 +130,7 @@
                 "jerarquiaArticulo": {
                     "sources": [
                       [
-                        "data.csv~csv"
+                        "/data/csv/data.csv~csv"
                       ]
                     ],
                     "s": "specificTaxonomy:$(level_1)",
@@ -186,7 +186,7 @@
                 "jerarquiaConcepto": {
                     "sources": [
                       [
-                        "data.csv~csv"
+                        "/data/csv/data.csv~csv"
                       ]
                     ],
                     "s": "specificTaxonomy:$(level_2)",
@@ -242,7 +242,7 @@
                 "jerarquiaSuboncepto_1": {
                     "sources": [
                       [
-                        "data.csv~csv"
+                        "/data/csv/data.csv~csv"
                       ]
                     ],
                     "s": "specificTaxonomy:$(level_3)",
@@ -298,7 +298,7 @@
                 "jerarquiaSuboncepto_CURRENTSBC": {
                     "sources": [
                       [
-                        "data.csv~csv"
+                        "/data/csv/data.csv~csv"
                       ]
                     ],
                     "s": "specificTaxonomy:$(level_CURRENTLVL)",

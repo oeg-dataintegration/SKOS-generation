@@ -1,0 +1,22 @@
+version: "2"
+services:
+#Skos-mg  
+  skosmg:
+    container_name: skosmg
+    build: . 
+    volumes:
+      - ./rdfizerConfig:/data
+      - ./result:/result
+      - ./input:/input
+    restart: always
+#Rdfizer
+  rdfizer:
+    container_name: rdfizer
+    image: w0xter/rdfizer:latest
+    restart: always
+    shm_size: '16gb'
+    volumes:
+        - ./rdfizerConfig:/data
+        - ./result:/data/output
+    ports:
+      - "4000:4000"
