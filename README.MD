@@ -33,14 +33,15 @@ Para generar el rdf de nuestro archivo SKOS tendremos que copiar dentro de la ca
 [Aquí](https://github.com/OEG-DataIntegration/SKOS-generation/tree/master/test) hay un ejemplo de como debería quedar el directorio **input/**  
 Una vez rellenado el directorio **input/** ejecutaremos el siguiente comando:  
 `bash generateRdf.sh`  
-Si todos los datos son correctos el rdf generado estará almacenado en **result/result.nt**   
-El resto de datos que hemos generado se encuentran en el directorio **rdfizerConfig/**  
+Si todos los datos son correctos el rdf generado estará almacenado en **result/result.nt**.   
+El resto de datos que hemos generado se encuentran en el directorio **rdfizerConfig/**.  
 #### Cosas a tener en cuenta:
-- El archivo de descripción tiene que seguir esta [estructura](https://github.com/OEG-DataIntegration/SKOS-generation/blob/master/test/clasificacion-economica-gasto-descripcion.csv)  
+- El archivo de descripción tiene que seguir esta [estructura](https://github.com/OEG-DataIntegration/SKOS-generation/blob/master/test/clasificacion-economica-gasto-descripcion.csv).  
 - Seguramente tengais que usar `sudo` para poder manipular los archivos que se encuentran dentro de los directorios:  
   - **input/**
   - **rdfizerConfig/**
   - **result/**  
+  
 Esta herramienta está todavía en fase de testeo. En caso de que os salte algún fallo después de realizar correctamente todos los pasos anteriores, abrís un [issue](https://github.com/OEG-DataIntegration/SKOS-generation/issues) con los datos que habeis utilizado y el error que os ha saltado. Para que pueda replicarlo y solucionarlo.  
 ## ¿En qué consiste el proceso de generación?
 * A partir del fichero csv de datos de la clasificación se generan dos ficheros csv: (1) fichero para los labels y definiciones y (2) fichero para la jerarquía entre términos.
