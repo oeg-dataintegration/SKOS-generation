@@ -12,7 +12,29 @@ Un fichero ejemplo es ejemplo-clasificacion.csv que corresponde a la clasificaci
 El SKOS generado contiene skos:topConcept para todos los términos del nivel 1. Para cada término se genera skos:prefLabel para español e inglés y skos:definition para español e inglés. Luego, de un nivel a uno más específico se generan tripletas con skos:narrower y de uno específico a uno más general se genera un skos:broader. Además se genera la información de los metadatos de la taxonomías utilizando dc:creator, dc:date, dc:title y dc:author.
 
 ## ¿Cómo se ejecuta el proceso?
-
+Necesitaremos tener **docker** y **docker-compose** instalados.  
+`git clone https://github.com/OEG-DataIntegration/SKOS-generation.git`    
+`cd SKOS-generation/`  
+`docker-compose up -d`  
+una vez hayamos generado el los docker containers ejecutaremos:  
+`docker ps`  
+Hay que comprobar que tenemos 2 contenedores corriendo: *rdfizer* y *skosmg*    
+Para generar el rdf de nuestro archivo SKOS tendremos que copiar dentro de la capeta **input/**    
+- El archivo skos  
+- El archivo de descripción  
+- Un archivo *config.json* con la siguiente estructura:  
+  ```JSON
+  {
+    "skosFileName":"NombreDelArchivoSkos.csv",
+    "descriptionFileName":"NombreDelArchivoDeDescripcion.csv",
+    "skosUri":"http://urlDelEsquemaSkos/"
+   }
+  ```
+[Aquí](https://github.com/OEG-DataIntegration/SKOS-generation/tree/master/test) hay un ejemplo de como debería quedar el directorio **input/**  
+Una vez rellenado el directorio **input/** ejecutaremos el siguiente comando:  
+`bash generateRdf.sh`  
+Si todos los datos son correctos el rdf generado estará almacenado en **result/result.nt**   
+El resto de datos que hemos generado se encuentran en el directorio **rdfizerConfig/**  
 ## ¿En qué consiste el proceso de generación?
 * A partir del fichero csv de datos de la clasificación se generan dos ficheros csv: (1) fichero para los labels y definiciones y (2) fichero para la jerarquía entre términos.
 
