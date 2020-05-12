@@ -27,7 +27,8 @@ Para generar el rdf de nuestro archivo SKOS tendremos que copiar dentro de la ca
   {
     "skosFileName":"NombreDelArchivoSkos.csv",
     "descriptionFileName":"NombreDelArchivoDeDescripcion.csv",
-    "skosUri":"http://urlDelEsquemaSkos/"
+    "skosUri":"http://urlDelEsquemaSkos",
+    "skosPrefix":"http://uriDelPrefijoCorrespondienteConElEsquemaSkos"
    }
   ```
 [Así](https://github.com/OEG-DataIntegration/SKOS-generation/tree/master/test) debería quedar el directorio **input/**  
