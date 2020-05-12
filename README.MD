@@ -30,13 +30,20 @@ Para generar el rdf de nuestro archivo SKOS tendremos que copiar dentro de la ca
     "skosUri":"http://urlDelEsquemaSkos/"
    }
   ```
-[Aquí](https://github.com/OEG-DataIntegration/SKOS-generation/tree/master/test) hay un ejemplo de como debería quedar el directorio **input/**  
+[Así](https://github.com/OEG-DataIntegration/SKOS-generation/tree/master/test) debería quedar el directorio **input/**  
+```BASH
+ ls input/  
+ clasificacion-economica-gasto-descripcion.csv  clasificacion-economica-gasto-labels-extended.csv  config.json
+```  
 Una vez rellenado el directorio **input/** ejecutaremos el siguiente comando:  
 `bash generateRdf.sh`  
 Si todos los datos son correctos el rdf generado estará almacenado en **result/result.nt**.   
 El resto de datos que hemos generado se encuentran en el directorio **rdfizerConfig/**.  
 #### Cosas a tener en cuenta:
-- El archivo de descripción tiene que seguir esta [estructura](https://github.com/OEG-DataIntegration/SKOS-generation/blob/master/test/clasificacion-economica-gasto-descripcion.csv).  
+- El archivo de [descripción](https://github.com/OEG-DataIntegration/SKOS-generation/blob/master/test/clasificacion-economica-gasto-descripcion.csv) tiene que usar estas columnas:
+```CSV
+creator,date,title,name,
+```  
 - Seguramente tengais que usar `sudo` para poder manipular los archivos que se encuentran dentro de los directorios:  
   - **input/**
   - **rdfizerConfig/**
