@@ -1,0 +1,11 @@
+.DS_Store
+.idea
+*/__pycache__/*
+code/tmp/*
+input/
+result/
+rdfizerConfig/csv/
+rdfizerConfig/mapping.ttl
+rdfizerConfig/mapping.yaml
+
+
