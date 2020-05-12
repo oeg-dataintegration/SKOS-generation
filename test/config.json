@@ -1,5 +1,6 @@
 {
     "skosFileName":"clasificacion-economica-gasto-labels-extended.csv",
     "descriptionFileName":"clasificacion-economica-gasto-descripcion.csv",
-    "skosUri":"http://example.com/skosuri/"
+    "skosUri":"http://example.com/skosuri",
+    "skosPrefix":"http://example.com/skosuri/prefix/"
 }

@@ -6,7 +6,8 @@ prefixes:
   rdf: http://www.w3.org/1999/02/22-rdf-syntax-ns#
   rdfs: http://www.w3.org/2000/01/rdf-schema#
   skos: http://www.w3.org/2004/02/skos/core#
-  specificTaxonomy: http://example.com/skosuri/
+  specificTaxonomy: http://example.com/skosuri
+  specificTaxonomyPrefix: http://example.com/skosuri/prefix/
   xsd: http://www.w3.org/2001/XMLSchema#
 mappings:
   conceptScheme:
@@ -37,7 +38,7 @@ mappings:
           - [str2, $(id)]
         mapping: label
       p: skos:narrower
-    s: specificTaxonomy:$(level_1)
+    s: specificTaxonomyPrefix:$(level_1)
     sources:
     - [/data/csv/data.csv~csv]
   jerarquiaCapitulo:
@@ -50,7 +51,7 @@ mappings:
           - [str2, $(id)]
         mapping: label
       p: skos:narrower
-    s: specificTaxonomy:$(level_0)
+    s: specificTaxonomyPrefix:$(level_0)
     sources:
     - [/data/csv/data.csv~csv]
   jerarquiaConcepto:
@@ -71,7 +72,7 @@ mappings:
           - [str2, $(id)]
         mapping: label
       p: skos:narrower
-    s: specificTaxonomy:$(level_2)
+    s: specificTaxonomyPrefix:$(level_2)
     sources:
     - [/data/csv/data.csv~csv]
   jerarquiaSuboncepto_1:
@@ -84,23 +85,23 @@ mappings:
           - [str2, $(id)]
         mapping: label
       p: skos:broader
-    s: specificTaxonomy:$(level_3)
+    s: specificTaxonomyPrefix:$(level_3)
     sources:
     - [/data/csv/data.csv~csv]
   label:
     po:
     - [a, 'skos:Concept']
-    - ['skos:inScheme', 'specificTaxonomy:~iri']
+    - ['skos:inScheme', 'specificTaxonomyPrefix:~iri']
     - ['skos:prefLabel', $(denomEs), es~lang]
     - ['skos:prefLabel', $(denomEn), en~lang]
-    - ['skos:definitionLabel', $(defEs), es~lang]
-    - ['skos:definitionLabel', $(defEn), en~lang]
-    s: specificTaxonomy:$(id)
+    - ['skos:definition', $(defEs), es~lang]
+    - ['skos:definition', $(defEn), en~lang]
+    s: specificTaxonomyPrefix:$(id)
     sources:
     - [/data/csv/labels.csv~csv]
   topConcept:
     po:
-    - ['skos:hasTopConcept', 'specificTaxonomy:$(level_0)~iri']
+    - ['skos:hasTopConcept', 'specificTaxonomyPrefix:$(level_0)~iri']
     s: 'specificTaxonomy:'
     sources:
     - [/data/csv/data.csv~csv]

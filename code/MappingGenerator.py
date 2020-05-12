@@ -3,16 +3,17 @@ import json
 import BashUtils as bash 
 class MappingGenerator:
     mappingStructure=json.loads(open('./levels.json').read())
-    def __init__(self, nCols_, specificTaxonomy_):
+    def __init__(self, nCols_, specificTaxonomy_, specificTaxonomyPrefix_):
         self.nCols = nCols_
         self.specificTaxonomy = specificTaxonomy_
+        self.specificTaxonomyPrefix = specificTaxonomyPrefix_
         self.jsonMapping = {"mappings":{}, "prefixes":{}}
         self.yamlMapping = ''
         self.generateMapping()
     def __generateJsonMapping(self):
         keys = list(MappingGenerator.mappingStructure["levels"].keys())
         self.jsonMapping["prefixes"] = MappingGenerator.mappingStructure["prefixes"]
-        self.jsonMapping["prefixes"].update({"specificTaxonomy":self.specificTaxonomy})
+        self.jsonMapping["prefixes"].update({"specificTaxonomy":self.specificTaxonomy, "specificTaxonomyPrefix":self.specificTaxonomyPrefix})
         j = 2
         for i in  range(self.nCols):
             if(i < 5):

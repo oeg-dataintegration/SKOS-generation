@@ -47,7 +47,7 @@
         "po": [
           [
             "skos:hasTopConcept",
-            "specificTaxonomy:$(level_0)~iri"
+            "specificTaxonomyPrefix:$(level_0)~iri"
           ]
           ]
       }},
@@ -58,7 +58,7 @@
               "/data/csv/labels.csv~csv"
             ]
           ],
-          "s": "specificTaxonomy:$(id)",
+          "s": "specificTaxonomyPrefix:$(id)",
           "po": [
             [
               "a",
@@ -66,7 +66,7 @@
             ],
             [
               "skos:inScheme",
-              "specificTaxonomy:~iri"
+              "specificTaxonomyPrefix:~iri"
             ],
             [
               "skos:prefLabel",
@@ -79,12 +79,12 @@
               "en~lang"
             ],
             [
-              "skos:definitionLabel",
+              "skos:definition",
               "$(defEs)",
               "es~lang"
             ],
             [
-              "skos:definitionLabel",
+              "skos:definition",
               "$(defEn)",
               "en~lang"
             ]
@@ -98,7 +98,7 @@
                 "/data/csv/data.csv~csv"
               ]
             ],
-            "s": "specificTaxonomy:$(level_0)",
+            "s": "specificTaxonomyPrefix:$(level_0)",
             "po": [
               {
                 "p": "skos:narrower",
@@ -133,7 +133,7 @@
                         "/data/csv/data.csv~csv"
                       ]
                     ],
-                    "s": "specificTaxonomy:$(level_1)",
+                    "s": "specificTaxonomyPrefix:$(level_1)",
                     "po": [
                       {
                         "p": "skos:broader",
@@ -189,7 +189,7 @@
                         "/data/csv/data.csv~csv"
                       ]
                     ],
-                    "s": "specificTaxonomy:$(level_2)",
+                    "s": "specificTaxonomyPrefix:$(level_2)",
                     "po": [
                       {
                         "p": "skos:broader",
@@ -245,7 +245,7 @@
                         "/data/csv/data.csv~csv"
                       ]
                     ],
-                    "s": "specificTaxonomy:$(level_3)",
+                    "s": "specificTaxonomyPrefix:$(level_3)",
                     "po": [
                       {
                         "p": "skos:broader",
@@ -301,7 +301,7 @@
                         "/data/csv/data.csv~csv"
                       ]
                     ],
-                    "s": "specificTaxonomy:$(level_CURRENTLVL)",
+                    "s": "specificTaxonomyPrefix:$(level_CURRENTLVL)",
                     "po": [
                       {
                         "p": "skos:broader",
