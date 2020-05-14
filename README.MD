@@ -23,16 +23,18 @@ docker-compose up -d
 Para comprobar que hemos generado los docker containers correctamente podemos ejecutar `docker ps`. Deben aparecer 2 contenedores corriendo: *rdfizer* y *skosmg*  
 
 ### Generación de los datos
+Los parámetros de entrada para el proceso de generación son: (1) el archivo SKOS (taxonomía) (2) el archivo con los metadatos del SKOS que incluye los datos del creador, la fecha de cración, el título de la taxonomía y su nombre (label), # url del esquema (skos:Scheme), por ejemplo http://vocab.linkeddata.es/datosabiertos/kos/hacienda/presupuesto/economica-gasto y (4) prefijo para los recursos del SKOS, por ejemplo http://vocab.linkeddata.es/datosabiertos/kos/hacienda/presupuesto/economica-gasto/
+
 Para generar el rdf de nuestro archivo SKOS tendremos que copiar dentro de la capeta **input/**    
 - El archivo skos  
 - El archivo de descripción  
 - Un archivo *config.json* con la siguiente estructura:  
   ```JSON
   {
-    "skosFileName":"NombreDelArchivoSkos.csv",
-    "descriptionFileName":"NombreDelArchivoDeDescripcion.csv",
-    "skosUri":"http://urlDelEsquemaSkos",
-    "skosPrefix":"http://uriDelPrefijoCorrespondienteConElEsquemaSkos"
+    "skosFileName":"NombreDelArchivoSkos.csv", # archivo SKOS
+    "descriptionFileName":"NombreDelArchivoDeDescripcion.csv", # archivo metadatos del SKOS
+    "skosUri":"http://urlDelEsquemaSkos", #url del esquema
+    "skosPrefix":"http://uriDelPrefijoCorrespondienteConElEsquemaSkos" #url de los recursos
    }
   ```
 [Así](https://github.com/OEG-DataIntegration/SKOS-generation/tree/master/test) debería quedar el directorio **input/**  
