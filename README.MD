@@ -34,7 +34,7 @@ Para generar el rdf de nuestro archivo SKOS tendremos que copiar dentro de la ca
 [Así](https://github.com/OEG-DataIntegration/SKOS-generation/tree/master/test) debería quedar el directorio **input/**  
 ```BASH
  ls input/  
- clasificacion-economica-gasto-descripcion.csv  clasificacion-economica-gasto-labels-extended.csv  config.json
+ ejemplo-descripcion.csv ejemplo-clasificacion.csv  config.json
 ```  
 Una vez rellenado el directorio **input/** ejecutaremos el siguiente comando:  
 `bash generateRdf.sh`  
