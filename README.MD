@@ -12,33 +12,43 @@ Un fichero ejemplo es ejemplo-clasificacion.csv que corresponde a la clasificaci
 El SKOS generado contiene skos:topConcept para todos los términos del nivel 1. Para cada término se genera skos:prefLabel para español e inglés y skos:definition para español e inglés. Luego, de un nivel a uno más específico se generan tripletas con skos:narrower y de uno específico a uno más general se genera un skos:broader. Además se genera la información de los metadatos de la taxonomías utilizando dc:creator, dc:date, dc:title y dc:author.
 
 ## ¿Cómo se ejecuta el proceso?
+
+### Setup/Preparacion
 Necesitaremos tener **docker** y **docker-compose** instalados.  
-`git clone https://github.com/OEG-DataIntegration/SKOS-generation.git`    
-`cd SKOS-generation/`  
-`docker-compose up -d`  
-una vez hayamos generado el los docker containers ejecutaremos:  
-`docker ps`  
-Hay que comprobar que tenemos 2 contenedores corriendo: *rdfizer* y *skosmg*    
+```
+git clone https://github.com/OEG-DataIntegration/SKOS-generation.git
+cd SKOS-generation/
+docker-compose up -d
+```
+Para comprobar que hemos generado los docker containers correctamente podemos ejecutar `docker ps`. Deben aparecer 2 contenedores corriendo: *rdfizer* y *skosmg*  
+
+### Generación de los datos
+Los parámetros de entrada para el proceso de generación son: (1) el archivo SKOS (taxonomía) (2) el archivo con los metadatos del SKOS que incluye los datos del creador, la fecha de cración, el título de la taxonomía y su nombre (label), # url del esquema (skos:Scheme), por ejemplo http://vocab.linkeddata.es/datosabiertos/kos/nombre-esquema y (4) url (prefijo) para los recursos del SKOS, por ejemplo http://vocab.linkeddata.es/datosabiertos/kos/nombre-esquema/.
+
 Para generar el rdf de nuestro archivo SKOS tendremos que copiar dentro de la capeta **input/**    
-- El archivo skos  
+- El archivo SKOS  
 - El archivo de descripción  
 - Un archivo *config.json* con la siguiente estructura:  
   ```JSON
   {
-    "skosFileName":"NombreDelArchivoSkos.csv",
-    "descriptionFileName":"NombreDelArchivoDeDescripcion.csv",
-    "skosUri":"http://urlDelEsquemaSkos/"
+    "skosFileName":"NombreDelArchivoSkos.csv", 
+    "descriptionFileName":"NombreDelArchivoDeDescripcion.csv", 
+    "skosUri":"http://urlDelEsquemaSkos", 
+    "skosPrefix":"http://uriDelPrefijoCorrespondienteConElEsquemaSkos" 
    }
   ```
 [Así](https://github.com/OEG-DataIntegration/SKOS-generation/tree/master/test) debería quedar el directorio **input/**  
 ```BASH
  ls input/  
- clasificacion-economica-gasto-descripcion.csv  clasificacion-economica-gasto-labels-extended.csv  config.json
+ ejemplo-descripcion.csv ejemplo-clasificacion.csv  config.json
 ```  
-Una vez rellenado el directorio **input/** ejecutaremos el siguiente comando:  
-`bash generateRdf.sh`  
+
+Finalmente, **ejecutaremos** el siguiente comando para generar los datos: `bash generateRdf.sh`
+
 Si todos los datos son correctos el rdf generado estará almacenado en **result/result.nt**.   
-El resto de datos que hemos generado se encuentran en el directorio **rdfizerConfig/**.  
+Datos estádisticos sobre el proceso de generación (tiempos, número de tripletas) se encontrarán en el directorio **rdfizerConfig/**.  
+
+
 #### Cosas a tener en cuenta:
 - El archivo de [descripción](https://github.com/OEG-DataIntegration/SKOS-generation/blob/master/test/clasificacion-economica-gasto-descripcion.csv) tiene que usar estas columnas:
 ```CSV
@@ -50,6 +60,8 @@ creator,date,title,name,
   - **result/**  
   
 Esta herramienta está todavía en fase de testeo. En caso de que os salte algún fallo después de realizar correctamente todos los pasos anteriores, abrís un [issue](https://github.com/OEG-DataIntegration/SKOS-generation/issues) con los datos que habeis utilizado y el error que os ha saltado. Para que pueda replicarlo y solucionarlo.  
+
+
 ## ¿En qué consiste el proceso de generación?
 * A partir del fichero csv de datos de la clasificación se generan dos ficheros csv: (1) fichero para los labels y definiciones y (2) fichero para la jerarquía entre términos.
 
