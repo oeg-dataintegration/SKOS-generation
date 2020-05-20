@@ -1,5 +1,5 @@
-FROM ubuntu:18.04
-RUN apt-get update && apt-get install -y nodejs npm wget unzip python3 bc vim build-essential python3-pip
+FROM alpine
+RUN apk add nodejs npm python3 py3-pip
 RUN npm i -g @rmlio/yarrrml-parser
 RUN mkdir /code && mkdir /result && mkdir /data && mkdir /input
 COPY code /code

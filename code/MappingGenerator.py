@@ -2,7 +2,7 @@ import yaml
 import json
 import BashUtils as bash 
 class MappingGenerator:
-    mappingStructure=json.loads(open('./levels.json').read())
+    mappingStructure=json.loads(open('/code/levels.json').read())
     def __init__(self, nCols_, specificTaxonomy_, specificTaxonomyPrefix_):
         self.nCols = nCols_
         self.specificTaxonomy = specificTaxonomy_

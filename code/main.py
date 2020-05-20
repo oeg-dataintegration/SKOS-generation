@@ -15,8 +15,8 @@ def readConfig(path):
             raise Exception("Review the configuration file, it's wrong.")
         if(not validateDescriptionFile(path + conf["descriptionFileName"])):
             raise Exception("The description file is not valid.")
-        copyfile(path + conf["skosFileName"], './tmp/csv/input.csv')
-        copyfile(path + conf["descriptionFileName"], './tmp/csv/description.csv')
+        copyfile(path + conf["skosFileName"], '/code/tmp/csv/input.csv')
+        copyfile(path + conf["descriptionFileName"], '/code/tmp/csv/description.csv')
         return conf
     except Exception as e:
         print(e)
