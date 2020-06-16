@@ -1,0 +1,5 @@
+Nivel1,Nivel2,Nivel3,Nivel4,prefLabelEsp,prefLabelEng,definitionEsp,definitionEng,altLabelEsp,altLabelEng,note,example,exactMatch,closeMatch,relatedTerm
+1,,,,derecho,law,definición de derecho,definition of law,legislación,legislation,extracted from DJE,I study law,eurovocURI,wikidataURI,abogadoURI
+,11,,,derecho laboral,labour law,definición de derecho laboral,definition of labour law,legislación laboral,labour legislation,extracted from DJE,I study labour law,eurovocURI,wikidataURI,trabajadorURI
+,,111,,derecho laboral agrario,agricultural labour law,definición de derecho laboral agrario,definition of agricultural labour law ,legislación laboral agraria,agricultural labour legislation,extracted from DJE,I study agricultural labour law,eurovocURI,wikidataURI,tractorURI
+,,,1111,representante del derecho laboral agrario,agricultural labour law agent,definición de representante del derecho laboral agrario,definition of agricultural labour law agent,representante de la legislación laboral agraria,agricultural labour legislation agent,extracted from DJE,I am an agricultural labour law agent,eurovocURI,wikidataURI,fertilizanteURI
