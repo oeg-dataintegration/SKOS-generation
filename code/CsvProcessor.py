@@ -3,14 +3,14 @@ import sys
 
 nLabelColumns = 4
 labelColumnsNames = "denomEs,denomEn,defEs,defEn,"
-
+rootPath = './'
 class CsvProcessor:
-    def __init__(self, path="./tmp/csv/input.csv"):
+    def __init__(self, path= rootPath + "tmp/csv/input.csv"):
         self.path = path
         self.ncols = 0
         self.values = []
-        self.outputFile = './tmp/csv/data.csv'
-        self.labelsFile = './tmp/csv/labels.csv'
+        self.outputFile = rootPath + 'tmp/csv/data.csv'
+        self.labelsFile = rootPath + 'tmp/csv/labels.csv'
         self.csvReader = None
         self.__loadCsv()
         self.__initializeOutputFiles()

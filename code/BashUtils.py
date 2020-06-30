@@ -1,4 +1,4 @@
 import os
-
+rootPath = '/code/'
 def translateMapping():
-    os.system("yarrrml-parser -i ./tmp/mapping.yaml -o ./tmp/mapping.ttl")
+    os.system("yarrrml-parser -i %stmp/mapping.yaml -o %stmp/mapping.ttl"%(rootPath, rootPath))

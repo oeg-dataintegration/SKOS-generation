@@ -6,6 +6,7 @@ from shutil import copyfile
 from MappingGenerator import MappingGenerator
 from CsvProcessor import CsvProcessor 
 
+rootPath = '/code/'
 #awk -F ',' '{$1="\""$1;$NF=$NF"\"";print $0 } OFS="\",\""' clasificacion-economica-gasto-labels-extended.csv > test_extended.csv
 def readConfig(path):
     try:
@@ -15,8 +16,8 @@ def readConfig(path):
             raise Exception("Review the configuration file, it's wrong.")
         if(not validateDescriptionFile(path + conf["descriptionFileName"])):
             raise Exception("The description file is not valid.")
-        copyfile(path + conf["skosFileName"], './tmp/csv/input.csv')
-        copyfile(path + conf["descriptionFileName"], './tmp/csv/description.csv')
+        copyfile(path + conf["skosFileName"], rootPath + 'tmp/csv/input.csv')
+        copyfile(path + conf["descriptionFileName"], rootPath + 'tmp/csv/description.csv')
         return conf
     except Exception as e:
         print(e)
