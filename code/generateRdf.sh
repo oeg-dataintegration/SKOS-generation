@@ -1,6 +1,6 @@
 #!/bin/bash 
-python3 main.py
-path=$(pwd)"/data"
+python3 main.py -p ../ciudadesAbiertas/
+path=$(pwd)"/tmp"
 yarrrml-parser -i ${path}/mapping.yaml -o ${path}/mapping.ttl
 docker rm -f rdfizerContainer
 sleep 5

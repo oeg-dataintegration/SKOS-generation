@@ -7,5 +7,5 @@ result/
 rdfizerConfig/csv/
 rdfizerConfig/mapping.ttl
 rdfizerConfig/mapping.yaml
-
+ciudadesAbiertas/*
 
