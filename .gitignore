@@ -4,6 +4,7 @@
 code/tmp/*
 input/
 result/
+rdfizerConfig/output/
 rdfizerConfig/csv/
 rdfizerConfig/mapping.ttl
 rdfizerConfig/mapping.yaml
