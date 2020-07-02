@@ -2,8 +2,9 @@ version: "2"
 services:
 #Skos-mg  
   skosmg:
-    container_name: skosmg
+    container_name: skos-generator-ctr
     build: . 
+    image: skos-generator
     volumes:
       - ./rdfizerConfig:/data
       - ./result:/result
